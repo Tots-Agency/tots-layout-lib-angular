@@ -1,0 +1,12 @@
+<div class="basic-page-header">
+    <div>
+        <div class="basic-page-header-title">{{title}}</div>
+        <div class="basic-page-header-subtitle">{{subtitle}}</div>
+    </div>
+    <div>
+        <button *ngIf="buttonName" mat-flat-button="" [color]="'primary'" (click)="onClick()">
+            <mat-icon>{{buttonIcon}}</mat-icon>
+            {{buttonName}}
+        </button>
+    </div>
+</div>

@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 /** Components */
 import { SimpleFooterComponent } from './footers/simple-footer/simple-footer.component';
+import { TotsBasicPageHeaderComponent } from './components/tots-basic-page-header/tots-basic-page-header.component';
 
 /** Navigations */
 import { TotsHorizontalNavigationComponent } from './navigations/tots-horizontal-navigation/tots-horizontal-navigation.component';
@@ -30,6 +31,7 @@ import { BaseItemNavigationComponent } from './navigations/items/base-item-navig
 
 
 
+
 @NgModule({
   declarations: [
     // Layouts
@@ -39,7 +41,8 @@ import { BaseItemNavigationComponent } from './navigations/items/base-item-navig
     ImageItemNavigationComponent,
     ButtonItemNavigationComponent,
     UserItemNavigationComponent,
-    BaseItemNavigationComponent
+    BaseItemNavigationComponent,
+    TotsBasicPageHeaderComponent
   ],
   imports: [
     RouterModule,
@@ -52,6 +55,9 @@ import { BaseItemNavigationComponent } from './navigations/items/base-item-navig
     MatDividerModule
   ],
   exports: [
+    // Components
+    TotsBasicPageHeaderComponent,
+
     // Layouts
     ModernLayoutComponent
   ]

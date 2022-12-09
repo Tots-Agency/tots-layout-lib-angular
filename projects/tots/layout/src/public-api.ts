@@ -14,6 +14,11 @@ export * from './lib/entities/tots-item-navigation';
 export * from './lib/services/tots-layout.service';
 
 /**
+ * Components
+ */
+export * from './lib/components/tots-basic-page-header/tots-basic-page-header.component';
+
+/**
  * Navigations
  */
 export * from './lib/navigations/items/base-item-navigation/base-item-navigation.component';

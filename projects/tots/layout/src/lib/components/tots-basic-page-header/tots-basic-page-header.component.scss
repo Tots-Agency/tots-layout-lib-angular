@@ -1,0 +1,21 @@
+.basic-page-header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.basic-page-header-title {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.basic-page-header-subtitle {
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+button {
+    background-color: var(--tots-primary-color) !important;
+}
