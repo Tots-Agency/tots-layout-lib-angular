@@ -1,0 +1,25 @@
+<a [routerLink]="data.path" class="container-sidebar-item">
+    <!-- Icon -->
+    <ng-container *ngIf="data.icon">
+        <mat-icon class="item-icon">{{data.icon}}</mat-icon>
+    </ng-container>
+
+    <!-- Title & Subtitle -->
+    <div class="title-wrapper">
+        <div class="item-title">
+            <span>
+                {{data.title}}
+            </span>
+        </div>
+    </div>
+
+    <!-- Badge -->
+    <ng-container *ngIf="data.badge">
+        <div class="item-badge">
+            <div
+                class="badge-content">
+                {{data.badge}}
+            </div>
+        </div>
+    </ng-container>
+</a>

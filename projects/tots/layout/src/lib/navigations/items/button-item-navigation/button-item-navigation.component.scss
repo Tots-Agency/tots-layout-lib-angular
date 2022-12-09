@@ -1,0 +1,32 @@
+.container-sidebar-item {
+    margin: 0 12px;
+    color: rgb(129,140,248);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: currentColor;
+    cursor: pointer;
+
+    .item-title {
+        opacity: .8;
+        font-size: 13px;
+        letter-spacing: .05em;
+        color: white;
+    }
+}
+.container-sidebar-item:hover {
+    background-color: rgba(255, 255, 255, .02);
+}
+
+.item-icon {
+    margin-right: 14px;
+    opacity: .6;
+    color: var(--tots-text-secundary);
+}
