@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonItemNavigationComponent, ImageItemNavigationComponent, TotsLayoutService } from 'projects/tots/layout/src/public-api';
+import { ButtonItemNavigationComponent, ImageItemNavigationComponent, TotsLayoutService, UserItemNavigationComponent } from 'projects/tots/layout/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -17,13 +17,32 @@ export class AppComponent implements OnInit {
   }
 
   loadNavigation() {
-    console.log('load navigation2');
+    this.layoutService.navigationClick.subscribe(action => {
+      if(action.key == 'profile'){
+        console.log('click profile');
+      }
+    });
+
     this.layoutService.putNavigationHorizontal([
       { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg' } },
       { component: ButtonItemNavigationComponent, data: { path: '/dashboard', title: 'Dashboard', icon: 'settings' }},
     ],
     [
-
+      { 
+        component: UserItemNavigationComponent, 
+        data: { 
+          firstname: 'Matias', 
+          lastname: 'Camiletti', 
+          email: 'matias@tots.agency', 
+          photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s', 
+          status: 'online',
+          items: [
+            { title: 'Profile', icon: 'settings', key: 'profile' },
+            { title: 'Settings', icon: 'settings', key: 'settings' },
+            { title: 'Sign out', icon: 'logout', key: 'logout' },
+          ]
+        }
+      }
     ])
   }
 }

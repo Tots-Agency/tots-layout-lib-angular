@@ -1,1 +1,38 @@
-<p>user-item-navigation works!</p>
+<!-- Button -->
+<button
+    mat-icon-button
+    class="button-topbar-user"
+    [matMenuTriggerFor]="userActions">
+    <span class="relative">
+        <img
+            class="w-7 h-7 rounded-full"
+            *ngIf="data.photo"
+            [src]="data.photo">
+        <mat-icon
+            *ngIf="!data.photo">settings</mat-icon>
+        <span
+            class="absolute right-0 bottom-0 w-2 h-2 rounded-full"
+            [ngClass]="{'mr-px mb-px': !data.photo,
+                          'bg-green-500': data.status === 'online',
+                          'bg-amber-500': data.status === 'away',
+                          'bg-red-500': data.status === 'busy',
+                          'bg-gray-400': data.status === 'not-visible'}"
+        ></span>
+    </span>
+</button>
+
+<!-- Mat Menu -->
+<mat-menu
+    [xPosition]="'before'"
+    #userActions="matMenu"
+    class="menu-user">
+    <div class="user-data-node">
+        <span>{{data.firstname}} {{data.lastname}}</span><br/>
+        <span class="mt-1.5 text-md font-medium">{{data.email}}</span>
+    </div>
+    <mat-divider class="my-2"></mat-divider>
+    <button *ngFor="let menuItem of data.items" mat-menu-item (click)="onClick(menuItem)">
+        <mat-icon>{{menuItem.icon}}</mat-icon>
+        <span>{{menuItem.title}}</span>
+    </button>
+</mat-menu>

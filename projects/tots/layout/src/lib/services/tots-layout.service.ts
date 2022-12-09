@@ -8,6 +8,7 @@ import { TotsItemNavigation } from '../entities/tots-item-navigation';
 export class TotsLayoutService {
 
   navigationItems = new BehaviorSubject<any>({});
+  navigationClick = new Subject<{key: string}>();
 
   constructor() { }
 

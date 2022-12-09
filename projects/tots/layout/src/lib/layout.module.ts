@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 
 /** Angular Material */
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 
 /** Components */
 import { SimpleFooterComponent } from './footers/simple-footer/simple-footer.component';
@@ -44,6 +47,9 @@ import { BaseItemNavigationComponent } from './navigations/items/base-item-navig
 
     // Angular Material
     MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatDividerModule
   ],
   exports: [
     // Layouts
