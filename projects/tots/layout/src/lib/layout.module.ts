@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 /** Layouts */
 import { ModernLayoutComponent } from './layouts/modern-layout/modern-layout.component';
+import { SimpleFooterComponent } from './footers/simple-footer/simple-footer.component';
 
 
 
@@ -11,7 +12,8 @@ import { ModernLayoutComponent } from './layouts/modern-layout/modern-layout.com
 @NgModule({
   declarations: [
     // Layouts
-    ModernLayoutComponent
+    ModernLayoutComponent,
+    SimpleFooterComponent
   ],
   imports: [
     RouterModule

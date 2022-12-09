@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 400;
+    color: var(--tots-text-secundary);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: var(--tots-text-secundary);
+    height: 5rem;
+    align-items: center;
+}
