@@ -1,4 +1,8 @@
+/** Angular Libraries */
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+/** Layouts */
 import { ModernLayoutComponent } from './layouts/modern-layout/modern-layout.component';
 
 
@@ -10,6 +14,7 @@ import { ModernLayoutComponent } from './layouts/modern-layout/modern-layout.com
     ModernLayoutComponent
   ],
   imports: [
+    RouterModule
   ],
   exports: [
     // Layouts
