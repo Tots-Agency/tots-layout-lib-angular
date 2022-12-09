@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LayoutModule } from 'projects/tots/layout/src/public-api';
+import { TotsLayoutModule } from 'projects/tots/layout/src/public-api';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { LayoutModule } from 'projects/tots/layout/src/public-api';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule
+    TotsLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

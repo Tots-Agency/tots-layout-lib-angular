@@ -62,4 +62,4 @@ import { BaseItemNavigationComponent } from './navigations/items/base-item-navig
     ModernLayoutComponent
   ]
 })
-export class LayoutModule { }
+export class TotsLayoutModule { }
