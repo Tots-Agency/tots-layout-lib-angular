@@ -5,9 +5,9 @@ import { CommonModule } from '@angular/common';
 
 /** Angular Material */
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 
 /** Components */
 import { SimpleFooterComponent } from './footers/simple-footer/simple-footer.component';
