@@ -1,16 +1,6 @@
-:host {
-    display: flex;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-weight: 400;
-    color: var(--tots-text-secundary);
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: var(--tots-text-secundary);
-    height: 5rem;
-    align-items: center;
-
-    span {
-        margin: 0;
-    }
+.simple-footer{
+  border-top: 1px solid var(--tots_color_neutral_20);
+  padding: 1.5em 3em;
+  color: var(--tots_color_neutral_70);
+  font-size: 0.9em;
 }

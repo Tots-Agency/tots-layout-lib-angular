@@ -1,3 +1,10 @@
 .modern-wrapper {
     background-color: var(--tots_color_neutral_10);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .modern-footer{
+      margin-top: auto;
+    }
 }
