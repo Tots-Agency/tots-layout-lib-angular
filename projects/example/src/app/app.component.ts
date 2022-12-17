@@ -7,7 +7,7 @@ import { ButtonItemNavigationComponent, ImageItemNavigationComponent, TotsLayout
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  
+
   constructor(
     protected layoutService: TotsLayoutService
   ) {}
@@ -25,16 +25,18 @@ export class AppComponent implements OnInit {
 
     this.layoutService.putNavigationHorizontal([
       { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg' } },
-      { component: ButtonItemNavigationComponent, data: { path: '/dashboard', title: 'Dashboard', icon: 'settings' }},
+      { component: ButtonItemNavigationComponent, data: { path: '/dashboard', title: 'Dashboard', icon: 'dashboard' }},
+      { component: ButtonItemNavigationComponent, data: { path: '/settings', title: 'Templates', icon: 'home' }},
+      { component: ButtonItemNavigationComponent, data: { path: '/settings', title: 'Settings', icon: 'settings' }},
     ],
     [
-      { 
-        component: UserItemNavigationComponent, 
-        data: { 
-          firstname: 'Matias', 
-          lastname: 'Camiletti', 
-          email: 'matias@tots.agency', 
-          photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s', 
+      {
+        component: UserItemNavigationComponent,
+        data: {
+          firstname: 'Matias',
+          lastname: 'Camiletti',
+          email: 'matias@tots.agency',
+          photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s',
           status: 'online',
           items: [
             { title: 'Profile', icon: 'settings', key: 'profile' },

@@ -1,31 +1,11 @@
 <!-- Button -->
-<button
-    mat-icon-button
-    class="button-topbar-user"
-    [matMenuTriggerFor]="userActions">
-    <span class="relative">
-        <img
-            class="w-7 h-7 rounded-full"
-            *ngIf="data.photo"
-            [src]="data.photo">
-        <mat-icon
-            *ngIf="!data.photo">settings</mat-icon>
-        <span
-            class="absolute right-0 bottom-0 w-2 h-2 rounded-full"
-            [ngClass]="{'mr-px mb-px': !data.photo,
-                          'bg-green-500': data.status === 'online',
-                          'bg-amber-500': data.status === 'away',
-                          'bg-red-500': data.status === 'busy',
-                          'bg-gray-400': data.status === 'not-visible'}"
-        ></span>
-    </span>
+<button mat-icon-button class="btn-user" [matMenuTriggerFor]="userActions">
+    <img *ngIf="data.photo" [src]="data.photo" alt="[Name_user]" />
+    <mat-icon *ngIf="!data.photo">account_circle</mat-icon>
 </button>
 
 <!-- Mat Menu -->
-<mat-menu
-    [xPosition]="'before'"
-    #userActions="matMenu"
-    class="menu-user">
+<mat-menu [xPosition]="'before'" #userActions="matMenu" class="menu-user">
     <div class="user-data-node">
         <span>{{data.firstname}} {{data.lastname}}</span><br/>
         <span class="mt-1.5 text-md font-medium">{{data.email}}</span>
