@@ -1,5 +1,114 @@
+// Material Design 3 - Color
+// https://m3.material.io/theme-builder#/custom
+
 :root {
-    --tots-primary-color: #FF801A;
+    --tots_color_primary: #FF801A;
+    --tots_color_secondary: #ac8a76;
+    --tots_color_tertiary: #6e97a4;
+    --tots_color_neutral: #ac8a76;
+
     --tots-text-secundary: #94a3b8;
     --tots-bg-moderm-default: #0f172a;
+
+    --tots_color_primary_0: #000000;
+    --tots_color_primary_10: #321300;
+    --tots_color_primary_20: #522300;
+    --tots_color_primary_25: #632C00;
+    --tots_color_primary_30: #743500;
+    --tots_color_primary_35: #863E00;
+    --tots_color_primary_40: #994700;
+    --tots_color_primary_50: #BF5B00;
+    --tots_color_primary_60: #E66F00;
+    --tots_color_primary_70: #FF8D3E;
+    --tots_color_primary_80: #FFB68A;
+    --tots_color_primary_90: #FFDBC8;
+    --tots_color_primary_95: #FFEDE5;
+    --tots_color_primary_98: #FFF8F5;
+    --tots_color_primary_99: #FFFBFF;
+    --tots_color_primary_100: #FFFFFF;
+
+    --tots_color_secundary_0: #000000;
+    --tots_color_secundary_10: #2B1709;
+    --tots_color_secundary_20: #432B1C;
+    --tots_color_secundary_25: #4F3626;
+    --tots_color_secundary_30: #5C4131;
+    --tots_color_secundary_35: #684C3C;
+    --tots_color_secundary_40: #755847;
+    --tots_color_secundary_50: #90705E;
+    --tots_color_secundary_60: #AC8A76;
+    --tots_color_secundary_70: #C8A48F;
+    --tots_color_secundary_80: #E5BFA9;
+    --tots_color_secundary_90: #FFDBC8;
+    --tots_color_secundary_95: #FFEDE5;
+    --tots_color_secundary_98: #FFF8F5;
+    --tots_color_secundary_99: #FFFBFF;
+    --tots_color_secundary_100: #FFFFFF;
+
+    --tots_color_tertiary_0: #000000;
+    --tots_color_tertiary_10: #001F27;
+    --tots_color_tertiary_20: #003642;
+    --tots_color_tertiary_25: #004150;
+    --tots_color_tertiary_30: #004E5F;
+    --tots_color_tertiary_35: #005A6E;
+    --tots_color_tertiary_40: #00677D;
+    --tots_color_tertiary_50: #00829D;
+    --tots_color_tertiary_60: #009EBD;
+    --tots_color_tertiary_70: #33BADB;
+    --tots_color_tertiary_80: #59D5F8;
+    --tots_color_tertiary_90: #B2EBFF;
+    --tots_color_tertiary_95: #DBF5FF;
+    --tots_color_tertiary_98: #F2FBFF;
+    --tots_color_tertiary_99: #F9FDFF;
+    --tots_color_tertiary_100: #FFFFFF;
+
+    --tots_color_error_0: #000000;
+    --tots_color_error_10: #410002;
+    --tots_color_error_20: #690005;
+    --tots_color_error_25: #7E0007;
+    --tots_color_error_30: #93000A;
+    --tots_color_error_35: #A80710;
+    --tots_color_error_40: #BA1A1A;
+    --tots_color_error_50: #DE3730;
+    --tots_color_error_60: #FF5449;
+    --tots_color_error_70: #FF897D;
+    --tots_color_error_80: #FFB4AB;
+    --tots_color_error_90: #FFDAD6;
+    --tots_color_error_95: #FFEDEA;
+    --tots_color_error_98: #FFF8F7;
+    --tots_color_error_99: #FFFBFF;
+    --tots_color_error_100: #FFFFFF;
+
+    --tots_color_neutral_0: #000000;
+    --tots_color_neutral_10: #201A17;
+    --tots_color_neutral_20: #362F2C;
+    --tots_color_neutral_25: #413A36;
+    --tots_color_neutral_30: #4D4541;
+    --tots_color_neutral_35: #59514D;
+    --tots_color_neutral_40: #655D59;
+    --tots_color_neutral_50: #7E7571;
+    --tots_color_neutral_60: #998F8A;
+    --tots_color_neutral_70: #B4A9A4;
+    --tots_color_neutral_80: #D0C4BF;
+    --tots_color_neutral_90: #ECE0D8;
+    --tots_color_neutral_95: #FBEEE9;
+    --tots_color_neutral_98: #FFF8F5;
+    --tots_color_neutral_99: #FFFBFF;
+    --tots_color_neutral_100: #FFFFFF;
+
+    --tots_color_neutral_variant_0: #000000;
+    --tots_color_neutral_variant_10: #241913;
+    --tots_color_neutral_variant_20: #3A2E27;
+    --tots_color_neutral_variant_25: #463931;
+    --tots_color_neutral_variant_30: #52443C;
+    --tots_color_neutral_variant_35: #5E4F47;
+    --tots_color_neutral_variant_40: #6B5B53;
+    --tots_color_neutral_variant_50: #85746B;
+    --tots_color_neutral_variant_60: #9F8D84;
+    --tots_color_neutral_variant_70: #BBA79D;
+    --tots_color_neutral_variant_80: #D7C2BB;
+    --tots_color_neutral_variant_90: #F4DED3;
+    --tots_color_neutral_variant_95: #FFEDE5;
+    --tots_color_neutral_variant_98: #FFF8F5;
+    --tots_color_neutral_variant_99: #FFFBFF;
+    --tots_color_neutral_variant_100: #FFFFFF;
 }
