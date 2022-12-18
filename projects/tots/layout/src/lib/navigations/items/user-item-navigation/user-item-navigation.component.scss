@@ -1,20 +1,31 @@
-.button-topbar-user {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    align-items: center;
-
-    img {
-        width: 40px;
-        height: 40px;
-        border-radius: 48px;
-        vertical-align: middle;
+.btn-user{
+    padding: 0;
+    overflow: hidden;
+  
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-}
-
-.user-data-node {
-    padding: 10px;
-    padding-top: 0px;
-    display: block;
-    color: white;
-}
+  }
+  
+  .button-topbar-user {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      align-items: center;
+  
+      img {
+          width: 40px;
+          height: 40px;
+          border-radius: 48px;
+          vertical-align: middle;
+      }
+  }
+  
+  .user-data-node {
+      padding: 10px;
+      padding-top: 0px;
+      display: block;
+      color: white;
+  }

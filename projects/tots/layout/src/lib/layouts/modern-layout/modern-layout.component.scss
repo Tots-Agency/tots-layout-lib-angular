@@ -1,3 +1,14 @@
 .modern-wrapper {
-    background-color: var(--tots-bg-moderm-default);
+    background-color: var(--tots_color_neutral_10);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-footer{
+    border-top: 1px solid var(--tots_color_neutral_20);
+    padding: 1.5em 3em;
+    color: var(--tots_color_neutral_70);
+    font-size: 0.9em;
+    margin-top: auto;
 }

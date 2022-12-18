@@ -24,8 +24,10 @@ export class AppComponent implements OnInit {
     });
 
     this.layoutService.putNavigationHorizontal([
-      { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg' } },
+      { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg', alt: 'Tots Layout' } },
       { component: ButtonItemNavigationComponent, data: { path: '/dashboard', title: 'Dashboard', icon: 'settings' }},
+      { component: ButtonItemNavigationComponent, data: { path: '/settings', title: 'Templates', icon: 'home' }},
+      { component: ButtonItemNavigationComponent, data: { path: '/settings', title: 'Settings', icon: 'settings' }},
     ],
     [
       { 

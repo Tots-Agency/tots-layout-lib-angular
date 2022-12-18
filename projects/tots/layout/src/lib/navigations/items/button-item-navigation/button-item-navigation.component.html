@@ -1,17 +1,21 @@
-<a [routerLink]="data.path" class="container-sidebar-item">
+<a mat-button [routerLink]="data.path" routerLinkActive="nav_item_active" class="nav_item" color="primary">
     <!-- Icon -->
-    <ng-container *ngIf="data.icon">
+
+    <mat-icon *ngIf="data.icon" class="nav_item_icon">{{data.icon}}</mat-icon>
+    <span class="nav_item_title">{{data.title}}</span>
+
+    <!-- <ng-container *ngIf="data.icon">
         <mat-icon class="item-icon">{{data.icon}}</mat-icon>
-    </ng-container>
+    </ng-container> -->
 
     <!-- Title & Subtitle -->
-    <div class="title-wrapper">
+    <!-- <div class="title-wrapper">
         <div class="item-title">
             <span>
                 {{data.title}}
             </span>
         </div>
-    </div>
+    </div> -->
 
     <!-- Badge -->
     <ng-container *ngIf="data.badge">
