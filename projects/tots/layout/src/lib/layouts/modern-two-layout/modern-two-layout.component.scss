@@ -1,0 +1,11 @@
+.main_layout_horizontal_navigation{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color_neutral_variant_90);
+    background-color: var(--color_neutral_10);
+
+    tots-simple-footer{
+        margin-top: auto;
+    }
+}

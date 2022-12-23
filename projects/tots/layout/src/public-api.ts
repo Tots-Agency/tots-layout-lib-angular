@@ -30,6 +30,7 @@ export * from './lib/navigations/items/user-item-navigation/user-item-navigation
  * Layouts
  */
 export * from './lib/layouts/modern-layout/modern-layout.component';
+export * from './lib/layouts/modern-two-layout/modern-two-layout.component';
 
 /**
  * Modules
