@@ -1,0 +1,16 @@
+<div class="toolbar_element">
+    <div class="container container_low">
+
+        <tots-base-item-navigation class="left" *ngFor="let item of leftItems" [item]="item"></tots-base-item-navigation>
+
+        <div *ngIf="config?.hasSearch" class="search" (click)="searchInput.click()">
+            <mat-icon>search</mat-icon>
+            <input #searchInput type="text" placeholder="Search here..." />
+        </div>
+
+        <div *ngIf="config?.hasSearch == undefined||config?.hasSearch == false" class="search"></div>
+
+        <tots-base-item-navigation class="right" *ngFor="let item of rightItems" [item]="item"></tots-base-item-navigation>
+
+    </div>
+</div>

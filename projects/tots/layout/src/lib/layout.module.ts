@@ -23,6 +23,7 @@ import { ButtonItemNavigationComponent } from './navigations/items/button-item-n
 import { UserItemNavigationComponent } from './navigations/items/user-item-navigation/user-item-navigation.component';
 import { BaseItemNavigationComponent } from './navigations/items/base-item-navigation/base-item-navigation.component';
 import { ModernTwoLayoutComponent } from './layouts/modern-two-layout/modern-two-layout.component';
+import { TotsHorizontalTopbarComponent } from './navigations/tots-horizontal-topbar/tots-horizontal-topbar.component';
 
 
 
@@ -44,7 +45,8 @@ import { ModernTwoLayoutComponent } from './layouts/modern-two-layout/modern-two
     UserItemNavigationComponent,
     BaseItemNavigationComponent,
     TotsBasicPageHeaderComponent,
-    ModernTwoLayoutComponent
+    ModernTwoLayoutComponent,
+    TotsHorizontalTopbarComponent
   ],
   imports: [
     RouterModule,
