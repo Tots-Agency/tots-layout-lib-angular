@@ -1,0 +1,24 @@
+<div class="horizontal_navigation_bar_element">
+    <div class="container">
+
+        <ng-container *ngFor="let link of navigation">
+            <div *ngIf="link.children == undefined||link.children?.length == 0" class="nav_item">
+                <a mat-button [routerLink]="link.url" routerLinkActive="nav_link_active" class="nav_link"><mat-icon>home</mat-icon> {{ link.title }} </a>
+            </div>
+
+            <div *ngIf="link.children != undefined&&link.children?.length != 0" class="nav_item nav_item_dropdown">
+                <button mat-button routerLinkActive="nav_link_active" class="nav_link">
+                    <mat-icon *ngIf="link.icon">{{ link.icon }}</mat-icon>
+                    {{ link.title }}
+                    <mat-icon style="order: 9; margin-right: 0; margin-left: 0.25em;">arrow_drop_down</mat-icon>
+                </button>
+
+                <div class="nav_item_menu">
+                    <a *ngFor="let sublink of link.children" mat-button [routerLink]="sublink.url" routerLinkActive="nav_link_active"> {{ sublink.title }} </a>
+                </div>
+            </div>
+        </ng-container>
+
+
+    </div>
+</div>

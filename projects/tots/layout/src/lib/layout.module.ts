@@ -24,6 +24,7 @@ import { UserItemNavigationComponent } from './navigations/items/user-item-navig
 import { BaseItemNavigationComponent } from './navigations/items/base-item-navigation/base-item-navigation.component';
 import { ModernTwoLayoutComponent } from './layouts/modern-two-layout/modern-two-layout.component';
 import { TotsHorizontalTopbarComponent } from './navigations/tots-horizontal-topbar/tots-horizontal-topbar.component';
+import { TotsHorizontalLinkBarComponent } from './navigations/tots-horizontal-link-bar/tots-horizontal-link-bar.component';
 
 
 
@@ -46,7 +47,8 @@ import { TotsHorizontalTopbarComponent } from './navigations/tots-horizontal-top
     BaseItemNavigationComponent,
     TotsBasicPageHeaderComponent,
     ModernTwoLayoutComponent,
-    TotsHorizontalTopbarComponent
+    TotsHorizontalTopbarComponent,
+    TotsHorizontalLinkBarComponent
   ],
   imports: [
     RouterModule,

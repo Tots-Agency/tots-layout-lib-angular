@@ -42,6 +42,83 @@ export class AppComponent implements OnInit {
           ]
         }
       }
-    ])
+    ]);
+
+    this.layoutService.putNavigationLinks([
+      {
+        title: 'Dashboard',
+        url: '/dashboard',
+        icon: 'home',
+    },
+    {
+        title: 'Apps',
+        url: 'apps',
+        icon: 'email',
+        children: [
+            { title: 'Inbox', url: '/documentation/button' },
+            { title: 'Read', url: '/documentation/button-toggle' },
+            { title: 'Compose', url: '/documentation/card' },
+            { title: 'Chat', url: 'accordion' },
+            { title: 'Calendar', url: 'alerts' },
+        ],
+    },
+    {
+        title: 'UI Kit',
+        url: 'ui-kit',
+        icon: 'today',
+        children: [
+            { title: 'Bottom Sheet', url: '/documentation/bottom-sheet' },
+            { title: 'Button', url: '/documentation/button' },
+            { title: 'Button Toggle', url: '/documentation/button-toggle' },
+            { title: 'Card', url: '/documentation/card' },
+            { title: 'Dialog', url: '/documentation/dialog' },
+            { title: 'Table', url: '/documentation/table' },
+            { title: 'Accordion', url: 'accordion' },
+            { title: 'Alerts', url: 'alerts' },
+            { title: 'Badges', url: 'badges' },
+        ],
+    },
+    {
+        title: 'Forms',
+        url: 'forms',
+        icon: 'description',
+        children: [
+            { title: 'Form Field', url: '/documentation/form-field' },
+            { title: 'Checkbox', url: '/documentation/checkbox' },
+            { title: 'Form Validation', url: 'form-validation' },
+            { title: 'Autocomplete', url: 'autocomplete' },
+        ],
+    },
+    {
+        title: 'Icons',
+        url: 'icons',
+        icon: 'sentiment_satisfied',
+    },
+    {
+        title: 'Special pages',
+        url: 'icons',
+        icon: 'book',
+        children: [
+            { title: 'Blank page', url: '/pages/blank-page' },
+            { title: 'Faq', url: '/pages/faq' },
+            { title: 'Invoice', url: '/pages/invoice' },
+            { title: 'Profile', url: '/pages/profile' },
+            { title: 'Pricing', url: '/pages/pricing' },
+            { title: 'Timeline', url: 'timeline' },
+            { title: 'Login', url: 'auth/login' },
+            { title: 'Register', url: 'auth/register' },
+            { title: 'Error 404', url: 'error-404' },
+            { title: 'Error 500', url: 'error-500' },
+        ],
+    },
+    {
+        title: 'Libraries',
+        url: 'libraries',
+        icon: 'sentiment_satisfied',
+        children: [
+            { title: 'Mia Table TOTS', url: '/libraries/mia-table-tots' },
+        ],
+    },
+    ]);
   }
 }

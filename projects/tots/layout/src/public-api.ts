@@ -7,6 +7,7 @@
  */
 export * from './lib/entities/tots-base-layout-config';
 export * from './lib/entities/tots-item-navigation';
+export * from './lib/entities/tots-link-item';
 
 /**
  * Services
