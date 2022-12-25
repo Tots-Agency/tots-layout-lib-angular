@@ -1,0 +1,9 @@
+<div class="confirmation-modal">
+    <h3> {{ config.title }} </h3>
+    <p [innerHTML]="config.caption"></p>
+    <br>
+    
+    <div class="buttons">
+        <button *ngFor="let button of config.buttons" mat-button (click)="onClick(button.value)">{{ button.title }}</button>
+    </div>
+</div>

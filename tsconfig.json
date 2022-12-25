@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@tots/confirm-modal": [
+        "dist/tots/confirm-modal"
+      ],
       "@tots/layout": [
         "dist/tots/layout"
       ]
