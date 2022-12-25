@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 /** Angular Material */
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 /** Modals */
 import { TotsConfirmModalComponent } from './modals/tots-confirm-modal/tots-confirm-modal.component';
@@ -15,10 +16,11 @@ import { TotsConfirmModalComponent } from './modals/tots-confirm-modal/tots-conf
   imports: [
     CommonModule,
     // Angular Material
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     TotsConfirmModalComponent
   ]
 })
-export class ConfirmModalModule { }
+export class TotsConfirmModalModule { }
