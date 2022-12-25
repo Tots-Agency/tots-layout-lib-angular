@@ -5,7 +5,7 @@ import { TotsConfirmModalConfig } from '../../entities/tots-confirm-modal-config
 @Component({
   selector: 'tots-confirm-modal',
   templateUrl: './tots-confirm-modal.component.html',
-  styleUrls: ['./tots-confirm-modal.component.css']
+  styleUrls: ['./tots-confirm-modal.component.scss']
 })
 export class TotsConfirmModalComponent implements OnInit {
 
