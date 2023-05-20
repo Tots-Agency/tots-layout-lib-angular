@@ -1,0 +1,36 @@
+<!-- Button -->
+<button mat-icon-button class="btn-user" [matMenuTriggerFor]="userActions">
+    <img *ngIf="data.photo" [src]="data.photo" alt="{{data.title}}" />
+    <mat-icon *ngIf="!data.photo">account_circle</mat-icon>
+</button>
+
+<!-- Mat Menu -->
+<mat-menu [xPosition]="'before'" #userActions="matMenu" class="menu-user">
+    <div class="user-data-node">
+        <span>{{data.title}}</span><br/>
+    </div>
+
+    <ng-container *ngIf="data.accounts && data.accounts.length > 0">
+        <div class="accounts-list">
+            <mat-divider class="my-2"></mat-divider>
+            <span class="change-account-span">Change account: </span>
+
+            <button *ngFor="let account of getAccounts()" mat-menu-item (click)="onClickAccount(account)">
+                <mat-icon>store</mat-icon>
+                <span>{{account.title}}</span>
+            </button>
+
+            <button *ngIf="data.hasNewAccount" mat-menu-item (click)="onClickNewAccount()">
+                <mat-icon>add_business</mat-icon>
+                <span>Add new account</span>
+            </button>
+
+        </div>
+    </ng-container>
+
+    <mat-divider class="my-2"></mat-divider>
+    <button *ngFor="let menuItem of data.items" mat-menu-item (click)="onClick(menuItem)">
+        <mat-icon>{{menuItem.icon}}</mat-icon>
+        <span>{{menuItem.title}}</span>
+    </button>
+</mat-menu>

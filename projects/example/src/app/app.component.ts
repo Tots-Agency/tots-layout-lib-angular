@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MultipleAccountsItemNavigationComponent } from 'projects/tots/layout/src/lib/navigations/items/multiple-accounts-item-navigation/multiple-accounts-item-navigation.component';
 import { ButtonItemNavigationComponent, ImageItemNavigationComponent, TotsLayoutService, UserItemNavigationComponent } from 'projects/tots/layout/src/public-api';
 
 @Component({
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
 
   loadNavigation() {
     this.layoutService.navigationClick.subscribe(action => {
+      console.log(action);
       if(action.key == 'profile'){
         console.log('click profile');
       }
@@ -35,6 +37,25 @@ export class AppComponent implements OnInit {
           email: 'matias@tots.agency', 
           photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s', 
           status: 'online',
+          items: [
+            { title: 'Profile', icon: 'settings', key: 'profile' },
+            { title: 'Settings', icon: 'settings', key: 'settings' },
+            { title: 'Sign out', icon: 'logout', key: 'logout' },
+          ]
+        }
+      },
+      {
+        component: MultipleAccountsItemNavigationComponent,
+        data: {
+          id: 1,
+          title: 'Account 1',
+          hasNewAccount: true,
+          accounts: [
+            { id: 1, title: 'Account 1', photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s' },
+            { id: 2, title: 'Account 2', photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s' },
+            { id: 3, title: 'Account 3', photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s' }
+          ],
+          //photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s', 
           items: [
             { title: 'Profile', icon: 'settings', key: 'profile' },
             { title: 'Settings', icon: 'settings', key: 'settings' },
