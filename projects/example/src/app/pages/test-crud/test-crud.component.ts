@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MoreMenuColumnComponent, StringColumnComponent, TotsActionTable, TotsTableApiComponent, TotsTableApiConfig } from '@tots/table';
 import { TotsBaseCrudPageComponent } from 'projects/tots/crud-page/src/public-api';
 import { TestService } from '../../services/test.service';
+import { StringFilterComponent, TotsFilterBoxConfig, TotsItemSelectedFilter } from '@tots/filter-box';
 
 @Component({
   selector: 'app-test-crud',
@@ -13,6 +14,7 @@ export class TestCrudComponent implements OnInit {
   @ViewChild('crudPage') crudPage!: TotsBaseCrudPageComponent;
 
   tableConfig = new TotsTableApiConfig();
+  filterConfig = new TotsFilterBoxConfig();
 
   constructor(
     protected testService: TestService
@@ -20,6 +22,7 @@ export class TestCrudComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadConfig();
+    this.loadFilters();
   }
 
   onClickAdd() {
@@ -47,6 +50,10 @@ export class TestCrudComponent implements OnInit {
     }
   }
 
+  onFilterApply(filters: Array<TotsItemSelectedFilter>) {
+    console.log(filters);
+  }
+
   loadConfig() {
     this.tableConfig.id = 'table-test';
     this.tableConfig.service = this.testService;
@@ -59,6 +66,18 @@ export class TestCrudComponent implements OnInit {
         { icon: 'add', title: 'Duplicar', key: 'duplicate' },
         { icon: 'add', title: 'Eliminar', key: 'remove' },
       ]} },
+    ];
+  }
+
+  loadFilters() {
+    this.filterConfig = new TotsFilterBoxConfig();
+    this.filterConfig.textButton = 'Filters';
+    this.filterConfig.isOnlyIconButton = true;
+    this.filterConfig.textAddButton = '+ Add Filter';
+    this.filterConfig.textClearButton = 'Clear Filters';
+
+    this.filterConfig.filters = [
+      { title: 'Title', component: StringFilterComponent },
     ];
   }
 }

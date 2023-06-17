@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { TotsFilterBoxConfig, TotsItemSelectedFilter } from '@tots/filter-box';
 import { TotsBreadcrumbItem } from '@tots/layout';
 import { TotsActionTable, TotsTableApiComponent, TotsTableApiConfig } from '@tots/table';
 
@@ -24,6 +25,9 @@ export class TotsBaseCrudPageComponent {
   @Input() tableConfig = new TotsTableApiConfig();
   @Output() tableAction = new EventEmitter<TotsActionTable>();
 
+  @Input() filterConfig?: TotsFilterBoxConfig;
+  @Output() filterApply = new EventEmitter<Array<TotsItemSelectedFilter>>();
+
   inputSearch = new FormControl<string>('');
 
   onTableAction(action: TotsActionTable) {
@@ -32,6 +36,10 @@ export class TotsBaseCrudPageComponent {
 
   onSearch() {
     this.tableAction.emit({ key: 'search', item: this.inputSearch.value });
+  }
+
+  onApplyFilters(filters: Array<TotsItemSelectedFilter>) {
+    this.filterApply.emit(filters);
   }
 
   onClickButton() {

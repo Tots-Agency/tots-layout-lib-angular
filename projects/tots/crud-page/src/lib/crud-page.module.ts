@@ -10,9 +10,11 @@ import { MatInputModule } from '@angular/material/input';
 /** Tots Libraries */
 import { TotsLayoutModule } from '@tots/layout';
 import { TotsTableModule } from '@tots/table';
+import { TotsFilterBoxModule } from '@tots/filter-box';
 
 /** Pages */
 import { TotsBaseCrudPageComponent } from './pages/base-crud-page/base-crud-page.component';
+
 
 
 
@@ -38,6 +40,7 @@ import { TotsBaseCrudPageComponent } from './pages/base-crud-page/base-crud-page
     /** Tots Libraries */
     TotsLayoutModule,
     TotsTableModule,
+    TotsFilterBoxModule
   ],
   exports: [
     /** Pages */

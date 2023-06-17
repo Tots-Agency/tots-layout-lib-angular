@@ -12,6 +12,8 @@
                 <mat-label>Search</mat-label>
                 <input matInput [formControl]="inputSearch" (keyup.enter)="onSearch()">
             </mat-form-field>
+
+            <tots-filter-box *ngIf="filterConfig" [config]="filterConfig!" (apply)="onApplyFilters($event)"></tots-filter-box>
         </div>
 
         <tots-table-api #tableComp [config]="tableConfig" (onAction)="onTableAction($event)"></tots-table-api>
