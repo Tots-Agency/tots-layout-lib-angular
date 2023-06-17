@@ -10,7 +10,7 @@
         <div class="tots-crud-page-filters-box">
             <mat-form-field>
                 <mat-label>Search</mat-label>
-                <input matInput [formControl]="inputSearch">
+                <input matInput [formControl]="inputSearch" (keyup.enter)="onSearch()">
             </mat-form-field>
         </div>
 

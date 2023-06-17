@@ -30,8 +30,20 @@ export class TotsBaseCrudPageComponent {
     this.tableAction.emit(action);
   }
 
+  onSearch() {
+    this.tableAction.emit({ key: 'search', item: this.inputSearch.value });
+  }
+
   onClickButton() {
     this.clickButton.emit();
+  }
+
+  loadItems() {
+    this.tableComp.loadItems();
+  }
+
+  refreshQueryAndLoadItems() {
+    this.tableComp.refreshQueryAndLoadItems();
   }
 
   public getTableComponent() {
