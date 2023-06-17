@@ -18,6 +18,8 @@ import { TotsHorizontalNavigationComponent } from './navigations/tots-horizontal
 
 /** Layouts */
 import { ModernLayoutComponent } from './layouts/modern-layout/modern-layout.component';
+import { TotsLeftSidebarLayoutComponent } from './layouts/left-sidebar-layout/left-sidebar-layout.component';
+
 import { ImageItemNavigationComponent } from './navigations/items/image-item-navigation/image-item-navigation.component';
 import { ButtonItemNavigationComponent } from './navigations/items/button-item-navigation/button-item-navigation.component';
 import { UserItemNavigationComponent } from './navigations/items/user-item-navigation/user-item-navigation.component';
@@ -36,10 +38,13 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
 
 
 
+
 @NgModule({
   declarations: [
     // Layouts
     ModernLayoutComponent,
+    TotsLeftSidebarLayoutComponent,
+
     SimpleFooterComponent,
     TotsHorizontalNavigationComponent,
     ImageItemNavigationComponent,
@@ -50,7 +55,8 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
     ModernTwoLayoutComponent,
     TotsHorizontalTopbarComponent,
     TotsHorizontalLinkBarComponent,
-    MultipleAccountsItemNavigationComponent
+    MultipleAccountsItemNavigationComponent,
+    
   ],
   imports: [
     RouterModule,
@@ -67,7 +73,8 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
     TotsBasicPageHeaderComponent,
 
     // Layouts
-    ModernLayoutComponent
+    ModernLayoutComponent,
+    TotsLeftSidebarLayoutComponent
   ]
 })
 export class TotsLayoutModule { }

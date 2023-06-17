@@ -33,6 +33,7 @@ export * from './lib/navigations/items/multiple-accounts-item-navigation/multipl
  */
 export * from './lib/layouts/modern-layout/modern-layout.component';
 export * from './lib/layouts/modern-two-layout/modern-two-layout.component';
+export * from './lib/layouts/left-sidebar-layout/left-sidebar-layout.component';
 
 /**
  * Modules
