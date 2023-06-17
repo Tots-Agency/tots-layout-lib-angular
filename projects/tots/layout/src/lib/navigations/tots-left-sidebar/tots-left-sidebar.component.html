@@ -1,0 +1,11 @@
+<div class="tots-left-sidebar">
+    <div class="container">
+
+        <ng-container *ngFor="let link of navigation">
+            <div class="nav_item">
+                <a mat-button [routerLink]="link.url" routerLinkActive="nav_link_active" class="nav_link"><mat-icon *ngIf="link.icon">{{link.icon}}</mat-icon> {{ link.title }} </a>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

@@ -16,6 +16,7 @@ import { TotsBreadcrumbComponent } from './components/tots-breadcrumb/tots-bread
 
 /** Navigations */
 import { TotsHorizontalNavigationComponent } from './navigations/tots-horizontal-navigation/tots-horizontal-navigation.component';
+import { TotsLeftSidebarComponent } from './navigations/tots-left-sidebar/tots-left-sidebar.component';
 
 /** Layouts */
 import { ModernLayoutComponent } from './layouts/modern-layout/modern-layout.component';
@@ -41,12 +42,16 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
 
 
 
+
 @NgModule({
   declarations: [
     // Components
     SimpleFooterComponent,
     TotsBreadcrumbComponent,
     TotsBasicPageHeaderComponent,
+
+    // Navigations
+    TotsLeftSidebarComponent,
 
     // Layouts
     ModernLayoutComponent,
@@ -63,8 +68,6 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
     TotsHorizontalTopbarComponent,
     TotsHorizontalLinkBarComponent,
     MultipleAccountsItemNavigationComponent,
-    
-    
   ],
   imports: [
     RouterModule,
