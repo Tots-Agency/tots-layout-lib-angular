@@ -6,17 +6,26 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TotsLayoutModule } from 'projects/tots/layout/src/public-api';
+import { TestCrudComponent } from './pages/test-crud/test-crud.component';
+import { TotsCrudPageModule } from 'projects/tots/crud-page/src/public-api';
+import { TotsCoreModule } from '@tots/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    TestCrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+
+    TotsCoreModule,
     TotsLayoutModule,
+    TotsCrudPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

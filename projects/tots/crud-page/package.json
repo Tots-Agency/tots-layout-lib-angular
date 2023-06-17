@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0",
-    "@tots/layout": "^15.0.8"
+    "@tots/layout": "^15.0.9"
   },
   "dependencies": {
     "tslib": "^2.3.0"

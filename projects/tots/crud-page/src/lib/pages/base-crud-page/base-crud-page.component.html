@@ -1,0 +1,20 @@
+<div class="tots-crud-page">
+    <tots-breadcrumb *ngIf="breadcrumb" [items]="breadcrumb!"></tots-breadcrumb>
+
+    <tots-basic-page-header [title]="title" [subtitle]="subtitle" [buttonName]="buttonName" [buttonIcon]="buttonIcon" (clickButton)="clickButton"></tots-basic-page-header>
+
+    <mat-divider></mat-divider>
+
+    <div class="tots-crud-page-table-box {{tableClasses}}">
+
+        <div class="tots-crud-page-filters-box">
+            <mat-form-field>
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="inputSearch">
+            </mat-form-field>
+        </div>
+
+        <tots-table-api #tableComp [config]="tableConfig" (onAction)="tableAction"></tots-table-api>
+
+    </div>
+</div>
