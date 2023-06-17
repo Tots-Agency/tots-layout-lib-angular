@@ -26,6 +26,14 @@ export class TotsBaseCrudPageComponent {
 
   inputSearch = new FormControl<string>('');
 
+  onTableAction(action: TotsActionTable) {
+    this.tableAction.emit(action);
+  }
+
+  onClickButton() {
+    this.clickButton.emit();
+  }
+
   public getTableComponent() {
     return this.tableComp;
   }
