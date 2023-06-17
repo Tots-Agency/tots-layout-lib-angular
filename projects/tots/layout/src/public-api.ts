@@ -8,6 +8,7 @@
 export * from './lib/entities/tots-base-layout-config';
 export * from './lib/entities/tots-item-navigation';
 export * from './lib/entities/tots-link-item';
+export * from './lib/entities/tots-breadcrum-item';
 
 /**
  * Services
@@ -18,6 +19,7 @@ export * from './lib/services/tots-layout.service';
  * Components
  */
 export * from './lib/components/tots-basic-page-header/tots-basic-page-header.component';
+export * from './lib/components/tots-breadcrumb/tots-breadcrumb.component';
 
 /**
  * Navigations

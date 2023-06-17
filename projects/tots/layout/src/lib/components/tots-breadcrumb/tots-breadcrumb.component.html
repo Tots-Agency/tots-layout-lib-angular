@@ -1,0 +1,11 @@
+<div class="tots-breadcrumb">
+    <span *ngFor="let item of items; let index = index">
+        <span *ngIf="index > 0" class="divider">&nbsp;/&nbsp;</span>
+        <ng-container *ngIf="item.path == undefined">
+            {{item.title}}
+        </ng-container>
+        <ng-container *ngIf="item.path != undefined">
+            <a [routerLink]="item.path">{{item.title}}</a>
+        </ng-container>
+    </span>
+</div>

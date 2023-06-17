@@ -16,7 +16,7 @@ import { TotsLayoutModule } from 'projects/tots/layout/src/public-api';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TotsLayoutModule
+    TotsLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

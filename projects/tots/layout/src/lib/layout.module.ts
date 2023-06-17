@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 /** Components */
 import { SimpleFooterComponent } from './footers/simple-footer/simple-footer.component';
 import { TotsBasicPageHeaderComponent } from './components/tots-basic-page-header/tots-basic-page-header.component';
+import { TotsBreadcrumbComponent } from './components/tots-breadcrumb/tots-breadcrumb.component';
 
 /** Navigations */
 import { TotsHorizontalNavigationComponent } from './navigations/tots-horizontal-navigation/tots-horizontal-navigation.component';
@@ -39,23 +40,30 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
 
 
 
+
 @NgModule({
   declarations: [
+    // Components
+    SimpleFooterComponent,
+    TotsBreadcrumbComponent,
+    TotsBasicPageHeaderComponent,
+
     // Layouts
     ModernLayoutComponent,
     TotsLeftSidebarLayoutComponent,
 
-    SimpleFooterComponent,
+    
     TotsHorizontalNavigationComponent,
     ImageItemNavigationComponent,
     ButtonItemNavigationComponent,
     UserItemNavigationComponent,
     BaseItemNavigationComponent,
-    TotsBasicPageHeaderComponent,
+    
     ModernTwoLayoutComponent,
     TotsHorizontalTopbarComponent,
     TotsHorizontalLinkBarComponent,
     MultipleAccountsItemNavigationComponent,
+    
     
   ],
   imports: [
@@ -71,6 +79,7 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
   exports: [
     // Components
     TotsBasicPageHeaderComponent,
+    TotsBreadcrumbComponent,
 
     // Layouts
     ModernLayoutComponent,
