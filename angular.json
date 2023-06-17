@@ -169,6 +169,39 @@
           }
         }
       }
+    },
+    "@tots/crud-page": {
+      "projectType": "library",
+      "root": "projects/tots/crud-page",
+      "sourceRoot": "projects/tots/crud-page/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/tots/crud-page/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tots/crud-page/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/tots/crud-page/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/tots/crud-page/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

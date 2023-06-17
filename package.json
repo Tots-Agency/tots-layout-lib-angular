@@ -7,6 +7,7 @@
     "build": "ng build",
     "build2": "ng build --project=@tots/layout --configuration production && cd dist/tots/layout/ && npm publish --access public",
     "build3": "ng build --project=@tots/confirm-modal --configuration production && cd dist/tots/confirm-modal/ && npm publish --access public",
+    "build4": "ng build --project=@tots/crud-page --configuration production && cd dist/tots/crud-page/ && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -22,6 +23,11 @@
     "@angular/platform-browser": "^15.0.4",
     "@angular/platform-browser-dynamic": "^15.0.4",
     "@angular/router": "^15.0.4",
+    "@tots/cloud-storage": "^15.0.1",
+    "@tots/core": "^15.0.13",
+    "@tots/form": "^15.0.28",
+    "@tots/loading": "^15.0.1",
+    "@tots/table": "^15.0.23",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -6,6 +6,9 @@
       "@tots/confirm-modal": [
         "dist/tots/confirm-modal"
       ],
+      "@tots/crud-page": [
+        "dist/tots/crud-page"
+      ],
       "@tots/layout": [
         "dist/tots/layout"
       ]
