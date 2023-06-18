@@ -11,9 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { TotsLayoutModule } from '@tots/layout';
 import { TotsTableModule } from '@tots/table';
 import { TotsFilterBoxModule } from '@tots/filter-box';
+import { TotsFormModule } from '@tots/form';
 
 /** Pages */
 import { TotsBaseCrudPageComponent } from './pages/base-crud-page/base-crud-page.component';
+import { TotsBaseNewPageComponent } from './pages/base-new-page/base-new-page.component';
+
 
 
 
@@ -24,7 +27,8 @@ import { TotsBaseCrudPageComponent } from './pages/base-crud-page/base-crud-page
 @NgModule({
   declarations: [
     /** Pages */
-    TotsBaseCrudPageComponent
+    TotsBaseCrudPageComponent,
+    TotsBaseNewPageComponent
   ],
   imports: [
     /** Angular */
@@ -40,11 +44,13 @@ import { TotsBaseCrudPageComponent } from './pages/base-crud-page/base-crud-page
     /** Tots Libraries */
     TotsLayoutModule,
     TotsTableModule,
-    TotsFilterBoxModule
+    TotsFilterBoxModule,
+    TotsFormModule
   ],
   exports: [
     /** Pages */
-    TotsBaseCrudPageComponent
+    TotsBaseCrudPageComponent,
+    TotsBaseNewPageComponent
   ]
 })
 export class TotsCrudPageModule { }

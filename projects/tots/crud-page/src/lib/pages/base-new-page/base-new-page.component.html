@@ -1,0 +1,13 @@
+<div class="tots-crud-page">
+    <tots-breadcrumb *ngIf="breadcrumb" [items]="breadcrumb!"></tots-breadcrumb>
+
+    <tots-basic-page-header [title]="title" [subtitle]="subtitle" [buttonName]="buttonName" [buttonIcon]="buttonIcon" (clickButton)="onClickButton()"></tots-basic-page-header>
+
+    <mat-divider></mat-divider>
+
+    <div class="tots-new-page-box {{formClasses}}">
+
+        <tots-form #form [fields]="fields" [item]="item" (onAction)="onActionForm($event)"></tots-form>
+
+    </div>
+</div>

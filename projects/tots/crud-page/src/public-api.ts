@@ -6,6 +6,7 @@
  * Pages
  */
 export * from './lib/pages/base-crud-page/base-crud-page.component';
+export * from './lib/pages/base-new-page/base-new-page.component';
 
 /**
  * Modules
