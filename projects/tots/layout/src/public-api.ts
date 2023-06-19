@@ -29,6 +29,7 @@ export * from './lib/navigations/items/button-item-navigation/button-item-naviga
 export * from './lib/navigations/items/image-item-navigation/image-item-navigation.component';
 export * from './lib/navigations/items/user-item-navigation/user-item-navigation.component';
 export * from './lib/navigations/items/multiple-accounts-item-navigation/multiple-accounts-item-navigation.component';
+export * from './lib/navigations/items/subtitle-item-navigation/subtitle-item-navigation.component';
 export * from './lib/navigations/tots-left-sidebar/tots-left-sidebar.component';
 
 /**

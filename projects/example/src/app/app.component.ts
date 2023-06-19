@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MultipleAccountsItemNavigationComponent } from 'projects/tots/layout/src/lib/navigations/items/multiple-accounts-item-navigation/multiple-accounts-item-navigation.component';
-import { ButtonItemNavigationComponent, ImageItemNavigationComponent, TotsLayoutService, UserItemNavigationComponent } from 'projects/tots/layout/src/public-api';
+import { ButtonItemNavigationComponent, ImageItemNavigationComponent, SubtitleItemNavigationComponent, TotsLayoutService, UserItemNavigationComponent } from 'projects/tots/layout/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +15,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadNavigation();
+    this.loadNavigationSidebar();
+  }
+
+  loadNavigationSidebar() {
+    this.layoutService.putNavigationSidebar([
+      { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg', alt: 'Tots Layout' } },
+      { component: ButtonItemNavigationComponent, data: { icon: 'home', title: 'Dashboard', path: '/left-basic/crud' } },
+      { component: SubtitleItemNavigationComponent, data: { title: 'Management' } },
+    ]);
   }
 
   loadNavigation() {

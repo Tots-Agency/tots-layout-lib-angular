@@ -25,4 +25,10 @@ export class TotsLayoutService {
       right: right
     });
   }
+
+  putNavigationSidebar(left: Array<TotsItemNavigation>) {
+    this.navigationItems.next({
+      left: left
+    });
+  }
 }

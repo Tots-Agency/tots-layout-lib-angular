@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TotsLinkItem } from '../../entities/tots-link-item';
 import { TotsLayoutService } from '../../services/tots-layout.service';
+import { TotsItemNavigation } from '@tots/layout';
 
 @Component({
   selector: 'tots-left-sidebar',
@@ -8,7 +9,8 @@ import { TotsLayoutService } from '../../services/tots-layout.service';
   styleUrls: ['./tots-left-sidebar.component.scss']
 })
 export class TotsLeftSidebarComponent {
-  navigation = new Array<TotsLinkItem>();
+
+  leftItems = new Array<TotsItemNavigation>();
 
   constructor(
     protected layoutService: TotsLayoutService
@@ -19,6 +21,8 @@ export class TotsLeftSidebarComponent {
   }
 
   loadConfig() {
-    this.layoutService.linkItems.subscribe(res => this.navigation = res);
+    this.layoutService.navigationItems.subscribe(res => {
+      this.leftItems = res.left;
+    });
   }
 }

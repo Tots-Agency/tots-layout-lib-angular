@@ -30,6 +30,7 @@ import { ModernTwoLayoutComponent } from './layouts/modern-two-layout/modern-two
 import { TotsHorizontalTopbarComponent } from './navigations/tots-horizontal-topbar/tots-horizontal-topbar.component';
 import { TotsHorizontalLinkBarComponent } from './navigations/tots-horizontal-link-bar/tots-horizontal-link-bar.component';
 import { MultipleAccountsItemNavigationComponent } from './navigations/items/multiple-accounts-item-navigation/multiple-accounts-item-navigation.component';
+import { SubtitleItemNavigationComponent } from './navigations/items/subtitle-item-navigation/subtitle-item-navigation.component';
 
 
 
@@ -68,6 +69,7 @@ import { MultipleAccountsItemNavigationComponent } from './navigations/items/mul
     TotsHorizontalTopbarComponent,
     TotsHorizontalLinkBarComponent,
     MultipleAccountsItemNavigationComponent,
+    SubtitleItemNavigationComponent,
   ],
   imports: [
     RouterModule,
