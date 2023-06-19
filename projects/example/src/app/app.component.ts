@@ -20,9 +20,28 @@ export class AppComponent implements OnInit {
 
   loadNavigationSidebar() {
     this.layoutService.putNavigationSidebar([
-      { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg', alt: 'Tots Layout' } },
+      { component: ImageItemNavigationComponent, data: { url: 'https://tots.agency/assets/img/logos/logo-horiz.svg', alt: 'Tots Layout', padding: '16px' } },
       { component: ButtonItemNavigationComponent, data: { icon: 'home', title: 'Dashboard', path: '/left-basic/crud' } },
       { component: SubtitleItemNavigationComponent, data: { title: 'Management' } },
+      { component: ButtonItemNavigationComponent, data: { icon: 'home', title: 'Users', path: '/users' } },
+      { component: ButtonItemNavigationComponent, data: { icon: 'home', title: 'Reserves', path: '/reserves' } },
+      { component: SubtitleItemNavigationComponent, data: { title: 'User Logged' } },
+      { 
+        component: UserItemNavigationComponent, 
+        data: { 
+          firstname: 'Matias', 
+          lastname: 'Camiletti', 
+          email: 'matias@tots.agency', 
+          photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GMiQsjet02eTthC4jC6ieAkdZLmjyeoh9kChZ8TT9A&s', 
+          status: 'online',
+          isShowName: true,
+          items: [
+            { title: 'Profile', icon: 'settings', key: 'profile' },
+            { title: 'Settings', icon: 'settings', key: 'settings' },
+            { title: 'Sign out', icon: 'logout', key: 'logout' },
+          ]
+        }
+      },
     ]);
   }
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TotsLinkItem } from '../../entities/tots-link-item';
 import { TotsLayoutService } from '../../services/tots-layout.service';
-import { TotsItemNavigation } from '@tots/layout';
+import { TotsItemNavigation } from '../../entities/tots-item-navigation';
 
 @Component({
   selector: 'tots-left-sidebar',
