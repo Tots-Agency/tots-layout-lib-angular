@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TotsActionForm, TotsFieldForm } from '@tots/form';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { TotsActionForm, TotsFieldForm, TotsFormComponent } from '@tots/form';
 import { TotsBreadcrumbItem } from '@tots/layout';
 
 @Component({
@@ -8,6 +8,8 @@ import { TotsBreadcrumbItem } from '@tots/layout';
   styleUrls: ['./base-new-page.component.scss']
 })
 export class TotsBaseNewPageComponent {
+
+  @ViewChild('totsForm') totsForm!: TotsFormComponent;
 
   @Input() breadcrumb?: Array<TotsBreadcrumbItem>;
 
@@ -26,6 +28,11 @@ export class TotsBaseNewPageComponent {
 
   onClickButton() {
     this.clickButton.emit();
+  }
+
+  onClickSave() {
+    let item = this.totsForm.updateItemByForm();
+    this.formAction.emit({ key: 'submit', item: item });
   }
 
   onActionForm(action: TotsActionForm) {

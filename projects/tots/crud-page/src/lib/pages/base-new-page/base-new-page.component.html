@@ -7,7 +7,12 @@
 
     <div class="tots-new-page-box {{formClasses}}">
 
-        <tots-form #form [fields]="fields" [item]="item" (onAction)="onActionForm($event)"></tots-form>
+        <tots-form #totsForm [fields]="fields" [item]="item" (onAction)="onActionForm($event)"></tots-form>
 
+        <div class="tots-new-page-submit-container">
+            <button mat-raised-button color="primary" (click)="onClickSave()" [disabled]="totsForm.group.invalid">
+                <span>Save</span>
+            </button>
+        </div>
     </div>
 </div>
