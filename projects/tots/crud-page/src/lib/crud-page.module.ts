@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 /** Tots Libraries */
 import { TotsLayoutModule } from '@tots/layout';
@@ -16,6 +17,7 @@ import { TotsFormModule } from '@tots/form';
 /** Pages */
 import { TotsBaseCrudPageComponent } from './pages/base-crud-page/base-crud-page.component';
 import { TotsBaseNewPageComponent } from './pages/base-new-page/base-new-page.component';
+
 
 
 
@@ -40,6 +42,7 @@ import { TotsBaseNewPageComponent } from './pages/base-new-page/base-new-page.co
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
 
     /** Tots Libraries */
     TotsLayoutModule,

@@ -31,7 +31,16 @@ export class TotsBaseCrudPageComponent {
 
   inputSearch = new FormControl<string>('');
 
+  selecteds = new Array<any>();
+
   onTableAction(action: TotsActionTable) {
+    if (action.key == 'select-item') {
+      action.item.isSelected = true;
+      this.selecteds.push(action.item);
+    }else if (action.key == 'unselect-item') {
+      action.item.isSelected = false;
+      this.selecteds = this.selecteds.filter((item) => item.id != action.item.id);
+    }
     this.tableAction.emit(action);
   }
 
@@ -41,6 +50,10 @@ export class TotsBaseCrudPageComponent {
 
   onApplyFilters(filters: Array<TotsItemSelectedFilter>) {
     this.filterApply.emit(filters);
+  }
+
+  onRemoveBulk() {
+    this.tableAction.emit({ key: 'remove-bulk', item: this.selecteds });
   }
 
   onClickButton() {

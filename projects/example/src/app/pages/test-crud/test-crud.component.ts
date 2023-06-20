@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MoreMenuColumnComponent, StringColumnComponent, TotsActionTable, TotsTableApiComponent, TotsTableApiConfig } from '@tots/table';
+import { CheckboxColumnComponent, MoreMenuColumnComponent, StringColumnComponent, TotsActionTable, TotsTableApiComponent, TotsTableApiConfig } from '@tots/table';
 import { TotsBaseCrudPageComponent } from 'projects/tots/crud-page/src/public-api';
 import { TestService } from '../../services/test.service';
 import { StringFilterComponent, TotsFilterBoxConfig, TotsItemSelectedFilter } from '@tots/filter-box';
@@ -58,6 +58,7 @@ export class TestCrudComponent implements OnInit {
     this.tableConfig.id = 'table-test';
     this.tableConfig.service = this.testService;
     this.tableConfig.columns = [
+      { key: 'check', component: CheckboxColumnComponent, title: '', },
       { key: 'slug', component: StringColumnComponent, title: 'Slug', field_key: 'slug' },
       { key: 'title', component: StringColumnComponent, title: 'Titulo', field_key: 'name' },
       //{ key: 'created_at', component: DateColumnComponent, title: 'Created At', field_key: 'created_at', hasOrder: false, extra: { format_in: 'YYYY-MM-DD', format_out: 'DD/MM/YYYY' } },
