@@ -1,2 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+/** Style Tots Layout **/
+.tots-left-sidebar-wrapper {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #151515;
+}
+tots-button-item-navigation {
+    color: white;
+    font-weight: 500;
+
+    .nav_item {
+        width: 100%;
+        text-align: left !important;
+        border-radius: 0px !important;
+        justify-content: left;
+    }
+
+    .tots-item-active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 185, 99, 1) !important;
+    }
+}
+/** END Style Tots Layout **/
