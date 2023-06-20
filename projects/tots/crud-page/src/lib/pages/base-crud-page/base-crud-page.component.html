@@ -8,9 +8,9 @@
     <div class="tots-crud-page-table-box {{tableClasses}}">
 
         <div class="tots-crud-page-filters-box">
-            <mat-form-field>
+            <mat-form-field [appearance]="'outline'">
                 <mat-label>Search</mat-label>
-                <input matInput [formControl]="inputSearch" (keyup.enter)="onSearch()">
+                <input matInput [formControl]="inputSearch" (keyup)="onSearch()">
             </mat-form-field>
 
             <tots-filter-box *ngIf="filterConfig" [config]="filterConfig!" (apply)="onApplyFilters($event)"></tots-filter-box>
