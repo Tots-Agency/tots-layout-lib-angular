@@ -68,6 +68,10 @@ export class TotsBaseCrudPageComponent {
     return this.tableComp.refreshQueryAndLoadItems();
   }
 
+  cleanSelecteds() {
+    this.selecteds = [];
+  }
+
   public getTableComponent() {
     return this.tableComp;
   }
