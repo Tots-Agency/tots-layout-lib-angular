@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TotsFilterBoxConfig, TotsItemSelectedFilter } from '@tots/filter-box';
 import { TotsBreadcrumbItem } from '@tots/layout';
@@ -7,7 +7,8 @@ import { TotsActionTable, TotsTableApiComponent, TotsTableApiConfig } from '@tot
 @Component({
   selector: 'tots-base-crud-page',
   templateUrl: './base-crud-page.component.html',
-  styleUrls: ['./base-crud-page.component.scss']
+  styleUrls: ['./base-crud-page.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TotsBaseCrudPageComponent {
 

@@ -7,6 +7,26 @@ mat-divider {
     margin-bottom: 16px;
 }
 
+.tots-crud-page-filters-box {
+    display: flex;
+    justify-content: space-between;
+
+    mat-form-field {
+        width: 100%;
+    }
+
+    .tots-filter-box-class {
+        margin-left: 10px;
+
+        .mat-mdc-button {
+            height: 56px !important;
+            border: 1px solid gray;
+        }
+    }
+
+    
+}
+
 .tots-crud-page-table-box {
     background-color: white;
     padding: 24px;

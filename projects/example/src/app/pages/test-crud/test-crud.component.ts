@@ -72,7 +72,7 @@ export class TestCrudComponent implements OnInit {
   loadFilters() {
     this.filterConfig = new TotsFilterBoxConfig();
     this.filterConfig.textButton = 'Filters';
-    this.filterConfig.isOnlyIconButton = true;
+    this.filterConfig.isOnlyIconButton = false;
     this.filterConfig.textAddButton = '+ Add Filter';
     this.filterConfig.textClearButton = 'Clear Filters';
 
