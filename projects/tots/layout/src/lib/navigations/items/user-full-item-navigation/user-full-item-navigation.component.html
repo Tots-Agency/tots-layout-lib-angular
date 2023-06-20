@@ -1,0 +1,24 @@
+<!-- Button -->
+<div mat-button class="tots-user-full-item" [matMenuTriggerFor]="userActions">
+    <div class="btn-user">
+        <img *ngIf="data.photo" [src]="data.photo" alt="{{data.firstname}} {{data.lastname}}" />
+        <mat-icon *ngIf="!data.photo">account_circle</mat-icon>
+    </div>
+    <div class="btn-user-data">
+        <span>{{data.firstname}} {{data.lastname}}</span>
+    </div>
+</div>
+
+
+<!-- Mat Menu -->
+<mat-menu [xPosition]="'before'" #userActions="matMenu" class="menu-user">
+    <div class="user-data-node">
+        <span>{{data.firstname}} {{data.lastname}}</span><br/>
+        <span class="mt-1.5 text-md font-medium">{{data.email}}</span>
+    </div>
+    <mat-divider class="my-2"></mat-divider>
+    <button *ngFor="let menuItem of data.items" mat-menu-item (click)="onClick(menuItem)">
+        <mat-icon>{{menuItem.icon}}</mat-icon>
+        <span>{{menuItem.title}}</span>
+    </button>
+</mat-menu>

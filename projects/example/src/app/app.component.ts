@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MultipleAccountsItemNavigationComponent } from 'projects/tots/layout/src/lib/navigations/items/multiple-accounts-item-navigation/multiple-accounts-item-navigation.component';
-import { ButtonItemNavigationComponent, ImageItemNavigationComponent, SubtitleItemNavigationComponent, TotsLayoutService, UserItemNavigationComponent } from 'projects/tots/layout/src/public-api';
+import { ButtonItemNavigationComponent, ImageItemNavigationComponent, SubtitleItemNavigationComponent, TotsLayoutService, UserFullItemNavigationComponent, UserItemNavigationComponent } from 'projects/tots/layout/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
       { component: ButtonItemNavigationComponent, data: { icon: 'home', title: 'Reserves', path: '/reserves' } },
       { component: SubtitleItemNavigationComponent, data: { title: 'User Logged' } },
       { 
-        component: UserItemNavigationComponent, 
+        component: UserFullItemNavigationComponent, 
         data: { 
           firstname: 'Matias', 
           lastname: 'Camiletti', 

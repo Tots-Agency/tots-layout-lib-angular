@@ -1,0 +1,21 @@
+.tots-user-full-item {
+    display: flex;
+    padding: 16px;
+    cursor: pointer;
+}
+.btn-user{
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50%;
+  
+    img{
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+}
+
+.btn-user-data {
+    padding-left: 16px;
+    line-height: 36px;
+}

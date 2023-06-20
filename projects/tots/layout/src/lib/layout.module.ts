@@ -31,6 +31,7 @@ import { TotsHorizontalTopbarComponent } from './navigations/tots-horizontal-top
 import { TotsHorizontalLinkBarComponent } from './navigations/tots-horizontal-link-bar/tots-horizontal-link-bar.component';
 import { MultipleAccountsItemNavigationComponent } from './navigations/items/multiple-accounts-item-navigation/multiple-accounts-item-navigation.component';
 import { SubtitleItemNavigationComponent } from './navigations/items/subtitle-item-navigation/subtitle-item-navigation.component';
+import { UserFullItemNavigationComponent } from './navigations/items/user-full-item-navigation/user-full-item-navigation.component';
 
 
 
@@ -70,6 +71,7 @@ import { SubtitleItemNavigationComponent } from './navigations/items/subtitle-it
     TotsHorizontalLinkBarComponent,
     MultipleAccountsItemNavigationComponent,
     SubtitleItemNavigationComponent,
+    UserFullItemNavigationComponent,
   ],
   imports: [
     RouterModule,
