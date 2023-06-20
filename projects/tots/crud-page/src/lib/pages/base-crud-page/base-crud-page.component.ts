@@ -47,11 +47,11 @@ export class TotsBaseCrudPageComponent {
   }
 
   loadItems() {
-    this.tableComp.loadItems();
+    return this.tableComp.loadItems();
   }
 
   refreshQueryAndLoadItems() {
-    this.tableComp.refreshQueryAndLoadItems();
+    return this.tableComp.refreshQueryAndLoadItems();
   }
 
   public getTableComponent() {
