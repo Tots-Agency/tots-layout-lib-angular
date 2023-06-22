@@ -5,7 +5,7 @@
     </div>
     <div>
         <button *ngIf="buttonName" mat-flat-button="" [color]="'primary'" (click)="onClick()">
-            <mat-icon>{{buttonIcon}}</mat-icon>
+            <mat-icon *ngIf="buttonIcon">{{buttonIcon}}</mat-icon>
             {{buttonName}}
         </button>
     </div>
