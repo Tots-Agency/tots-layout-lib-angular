@@ -29,6 +29,7 @@ export class TotsBaseCrudPageComponent {
   @Input() filterConfig?: TotsFilterBoxConfig;
   @Output() filterApply = new EventEmitter<Array<TotsItemSelectedFilter>>();
 
+  @Input() hasSearch = true;
   inputSearch = new FormControl<string>('');
 
   selecteds = new Array<any>();
