@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TotsConfirmModalComponent, TotsConfirmModalConfig } from 'projects/tots/confirm-modal/src/public-api';
 import { TotsBreadcrumbItem } from 'projects/tots/layout/src/public-api';
 
 @Component({
@@ -13,9 +15,14 @@ export class DashboardComponent implements OnInit {
     { title: 'Title Test', path: '/dashboard' }
   ]
 
-  constructor() { }
+  constructor(
+    protected dialog: MatDialog,
+  ) { }
 
   ngOnInit(): void {
   }
 
+  testConfirmModal() {
+    this.dialog.open(TotsConfirmModalComponent, { data: new TotsConfirmModalConfig('Are you sure?'), width: '420px', })
+  }
 }

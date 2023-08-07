@@ -4,6 +4,6 @@
     <br>
     
     <div class="buttons">
-        <button *ngFor="let button of config.buttons" mat-button (click)="onClick(button.value)">{{ button.title }}</button>
+        <button *ngFor="let button of config.buttons" mat-button (click)="onClick(button.value)" [color]="button.color">{{button.title}}</button>
     </div>
 </div>
