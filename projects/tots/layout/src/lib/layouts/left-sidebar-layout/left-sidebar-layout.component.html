@@ -1,10 +1,19 @@
 <!-- Overflow Navigation for screen Small-->
 
 <!-- Wrapper -->
-<div class="tots-left-layout-wrapper">
+<div class="tots-left-layout-wrapper intro_component_animation">
+
+    <!-- Sidebar Mobile -->
+    <div class="toolbar-mobile">
+      <button mat-button class="btn-menu" (click)="isMenuOpen = !isMenuOpen">
+        <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
+        <mat-icon *ngIf="isMenuOpen">close</mat-icon>
+        Menu
+      </button>
+    </div>
 
     <!-- Sidebar -->
-    <div class="tots-left-sidebar-header">
+    <div class="tots-left-sidebar-header" [ngClass]="{'tots-left-sidebar-header-mobile': isMenuOpen}" (click)="isMenuOpen = false;">
         <tots-left-sidebar></tots-left-sidebar>
     </div>
 
@@ -12,4 +21,5 @@
     <div class="tots-left-content">
         <router-outlet></router-outlet>
     </div>
+
 </div>

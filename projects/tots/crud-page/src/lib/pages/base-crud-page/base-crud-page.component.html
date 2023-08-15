@@ -1,4 +1,4 @@
-<div class="tots-crud-page">
+<div class="tots-crud-page intro_component_animation">
     <tots-breadcrumb *ngIf="breadcrumb" [items]="breadcrumb!"></tots-breadcrumb>
 
     <tots-basic-page-header [title]="title" [subtitle]="subtitle" [buttonName]="buttonName" [buttonIcon]="buttonIcon" (clickButton)="onClickButton()"></tots-basic-page-header>
@@ -11,17 +11,20 @@
             <mat-form-field *ngIf="hasSearch" [appearance]="'outline'">
                 <mat-label>Search</mat-label>
                 <input matInput [formControl]="inputSearch" (keyup)="onSearch()">
+                <mat-icon matPrefix>search</mat-icon>
             </mat-form-field>
 
             <tots-filter-box *ngIf="filterConfig" class="tots-filter-box-class" [config]="filterConfig!" (apply)="onApplyFilters($event)"></tots-filter-box>
         </div>
 
-        <div *ngIf="selecteds.length > 0" class="tots-crud-page-selecteds">
-            <p>{{selecteds.length}} item/s selected</p>
-            <button mat-flat-button (click)="onRemoveBulk()">Delete</button>
+        <div *ngIf="selecteds.length > 0" class="tots-crud-page-selecteds intro_component_animation">
+            <div>{{selecteds.length}} item/s selected</div>
+            <button mat-flat-button (click)="onRemoveBulk()"><mat-icon>delete</mat-icon> Delete</button>
         </div>
 
-        <tots-table-api #tableComp [config]="tableConfig" (onAction)="onTableAction($event)"></tots-table-api>
+        <div class="tots-crud-page-table-content">
+          <tots-table-api #tableComp [config]="tableConfig" (onAction)="onTableAction($event)"></tots-table-api>
+        </div>
 
     </div>
 </div>
