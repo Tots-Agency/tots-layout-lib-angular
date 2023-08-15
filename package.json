@@ -25,7 +25,7 @@
     "@angular/router": "^15.0.4",
     "@tots/cloud-storage": "^15.0.1",
     "@tots/core": "^15.0.13",
-    "@tots/filter-box": "^15.0.4",
+    "@tots/filter-box": "^15.0.11",
     "@tots/form": "^15.0.28",
     "@tots/loading": "^15.0.1",
     "@tots/table": "^15.0.27",
