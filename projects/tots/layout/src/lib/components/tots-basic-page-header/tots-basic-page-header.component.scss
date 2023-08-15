@@ -2,12 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
 }
 
 .basic-page-header-title {
     font-weight: 800;
-    font-size: 2rem;
 }
 
 .basic-page-header-subtitle {
@@ -16,5 +14,5 @@
 }
 
 button {
-    background-color: var(--tots_color_primary) !important;
+    /* background-color: var(--tots_color_primary) !important; */
 }

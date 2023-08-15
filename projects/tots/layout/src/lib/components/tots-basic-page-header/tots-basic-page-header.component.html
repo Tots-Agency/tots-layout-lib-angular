@@ -1,10 +1,10 @@
 <div class="basic-page-header">
-    <div>
-        <div class="basic-page-header-title">{{title}}</div>
+    <div class="column-left">
+        <h1 class="basic-page-header-title">{{title}}</h1>
         <div class="basic-page-header-subtitle">{{subtitle}}</div>
     </div>
-    <div>
-        <button *ngIf="buttonName" mat-flat-button="" [color]="'primary'" (click)="onClick()">
+    <div class="column-right">
+        <button *ngIf="buttonName" mat-flat-button color="primary" (click)="onClick()">
             <mat-icon *ngIf="buttonIcon">{{buttonIcon}}</mat-icon>
             {{buttonName}}
         </button>

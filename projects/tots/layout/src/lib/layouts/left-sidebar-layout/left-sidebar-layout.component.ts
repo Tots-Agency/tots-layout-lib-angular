@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class TotsLeftSidebarLayoutComponent {
 
+  isMenuOpen:boolean = false;
 }

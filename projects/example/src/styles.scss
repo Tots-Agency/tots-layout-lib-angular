@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 .tots-crud-page-table-box {
-    background-color: darkgray !important;
+    background-color: var(--color_neutral_20) !important;
 }
-
 /** Style Tots Layout **/
+.tots-left-layout-wrapper{
+  background-color: var(--color_neutral_10) !important;
+}
 .tots-left-sidebar-wrapper {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #151515;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #151515 !important;
 }
 tots-button-item-navigation {
     color: white;
     font-weight: 500;
 
-    .nav_item {
+    .nav-item {
         width: 100%;
         text-align: left !important;
         border-radius: 0px !important;
@@ -24,3 +26,7 @@ tots-button-item-navigation {
     }
 }
 /** END Style Tots Layout **/
+
+.tots-crud-page-selecteds{
+  background-color: var(--color_primary_20) !important;
+}

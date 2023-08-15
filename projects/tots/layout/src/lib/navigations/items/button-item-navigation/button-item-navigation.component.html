@@ -1,29 +1,12 @@
-<a mat-button [routerLink]="data.path" routerLinkActive="tots-item-active" class="nav_item" color="primary">
-    <!-- Icon -->
+<a mat-button [routerLink]="data.path" routerLinkActive="nav-item-active" class="nav-item">
 
-    <mat-icon *ngIf="data.icon" class="nav_item_icon">{{data.icon}}</mat-icon>
-    <span class="nav_item_title">{{data.title}}</span>
+  <mat-icon *ngIf="data.icon" class="nav-item-icon">{{data.icon}}</mat-icon>
+  <span class="nav-item-title">{{data.title}}</span>
 
-    <!-- <ng-container *ngIf="data.icon">
-        <mat-icon class="item-icon">{{data.icon}}</mat-icon>
-    </ng-container> -->
+  <ng-container *ngIf="data.badge">
+    <div class="item-badge">
+      <div class="badge-content"> {{data.badge}} </div>
+    </div>
+  </ng-container>
 
-    <!-- Title & Subtitle -->
-    <!-- <div class="title-wrapper">
-        <div class="item-title">
-            <span>
-                {{data.title}}
-            </span>
-        </div>
-    </div> -->
-
-    <!-- Badge -->
-    <ng-container *ngIf="data.badge">
-        <div class="item-badge">
-            <div
-                class="badge-content">
-                {{data.badge}}
-            </div>
-        </div>
-    </ng-container>
 </a>
