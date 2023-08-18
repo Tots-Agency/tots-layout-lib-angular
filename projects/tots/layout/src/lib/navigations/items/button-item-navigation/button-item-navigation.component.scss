@@ -38,14 +38,14 @@
   }
 
   .nav-item-icon {
-    color: var(--tots_color_primary_90);
+    color: var(--color_primary_90);
     position: relative;
     z-index: 1;
     color: inherit;
   }
 
   .nav-item-title {
-    color: var(--tots_color_primary_90);
+    color: var(--color_primary_90);
     position: relative;
     z-index: 1;
     left: 0;
@@ -58,6 +58,6 @@
 }
 
 .nav-item-active {
-  background-color: var(--tots_color_secundary_30);
+  background-color: var(--color_accent_30);
   color: orange !important;
 }
