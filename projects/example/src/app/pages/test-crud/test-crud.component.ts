@@ -3,6 +3,7 @@ import { CheckboxColumnComponent, MoreMenuColumnComponent, StringColumnComponent
 import { TotsBaseCrudPageComponent } from 'projects/tots/crud-page/src/public-api';
 import { TestService } from '../../services/test.service';
 import { StringFilterComponent, TotsFilterBoxConfig, TotsItemSelectedFilter } from '@tots/filter-box';
+import { TotsBreadcrumbItem } from '@tots/layout';
 
 @Component({
   selector: 'app-test-crud',
@@ -12,6 +13,10 @@ import { StringFilterComponent, TotsFilterBoxConfig, TotsItemSelectedFilter } fr
 export class TestCrudComponent implements OnInit {
 
   @ViewChild('crudPage') crudPage!: TotsBaseCrudPageComponent;
+  breadcrumb: Array<TotsBreadcrumbItem> = [
+    { title: 'Home', path: '/dashboard' },
+    { title: 'Dashboard' },
+  ];
 
   tableConfig = new TotsTableApiConfig();
   filterConfig = new TotsFilterBoxConfig();

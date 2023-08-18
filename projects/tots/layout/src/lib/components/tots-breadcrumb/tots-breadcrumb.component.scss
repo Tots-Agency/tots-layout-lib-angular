@@ -1,0 +1,13 @@
+.tots-breadcrumb{
+  span{
+    color: var(--color_neutral_60);
+    a{
+      text-decoration: none;
+      color: var(--color_neutral_20);
+      &:hover{
+        text-decoration: underline;
+        color: var(--color_primary_70);
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
 <!-- Button -->
-<button mat-button class="tots-user-full-item" [matMenuTriggerFor]="userActions">
-  <div class="image-user">
-    <img *ngIf="data.photo" [src]="data.photo" alt="{{data.firstname}} {{data.lastname}}" />
+<button mat-button class="tots-user-full-item tots_left_sidebar_button_item" [matMenuTriggerFor]="userActions">
+  <div class="avatar_container_very_small">
+    <img *ngIf="data.photo" [src]="data.photo" alt="{{data.firstname}} {{data.lastname}}" class="image_cover" />
     <mat-icon *ngIf="!data.photo">account_circle</mat-icon>
   </div>
-  <div class="btn-user-data"> {{data.firstname}} {{data.lastname}} </div>
+  <div class="nav-item-title"> {{data.firstname}} {{data.lastname}} </div>
 </button>
 
 <!-- Mat Menu -->
 <mat-menu [xPosition]="'before'" #userActions="matMenu" class="menu-user">
-  <div class="user-data-node">
-    <div class="user-data-node-title">{{data.firstname}} {{data.lastname}}</div>
-    <div class="user-data-node-subtitle">{{data.email}}</div>
+  <div class="user-data-node pt_1 pb_2 px_2">
+    <div class="user-data-node-title h5">{{data.firstname}} {{data.lastname}}</div>
+    <div class="user-data-node-subtitle body_1 color_neutral_50">{{data.email}}</div>
   </div>
   <mat-divider></mat-divider>
   <button *ngFor="let menuItem of data.items" mat-menu-item (click)="onClick(menuItem)">

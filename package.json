@@ -28,6 +28,7 @@
     "@tots/filter-box": "^15.0.11",
     "@tots/filter-menu": "^15.0.2",
     "@tots/form": "^15.0.28",
+    "@tots/layout": "^15.0.14",
     "@tots/loading": "^15.0.1",
     "@tots/table": "^15.0.27",
     "@tots/users-selector-menu": "^15.0.2",

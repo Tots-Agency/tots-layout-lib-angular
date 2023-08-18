@@ -1,18 +1,8 @@
 .basic-page-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.basic-page-header-title {
-    font-weight: 800;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .basic-page-header-subtitle {
-    font-weight: 500;
-    margin-top: 6px;
-}
-
-button {
-    /* background-color: var(--tots_color_primary) !important; */
+  font-weight: 500;
 }
