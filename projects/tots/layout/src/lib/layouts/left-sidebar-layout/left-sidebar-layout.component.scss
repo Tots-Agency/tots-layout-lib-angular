@@ -21,6 +21,11 @@
   @media only screen and (max-width: 959px) {
     display: block;
   }
+
+  .btn-menu{
+    background-color: var(--color_neutral_20);
+    color: var(--color_neutral_98);
+  }
 }
 
 .tots-left-sidebar-header {
