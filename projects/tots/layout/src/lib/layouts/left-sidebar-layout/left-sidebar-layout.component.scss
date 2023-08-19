@@ -61,5 +61,8 @@
 }
 
 .tots-left-content {
-  width: 100%;
+  width: calc(100% - 280px);
+  @media only screen and (max-width: 959px) {
+    width: 100%;
+  }
 }
