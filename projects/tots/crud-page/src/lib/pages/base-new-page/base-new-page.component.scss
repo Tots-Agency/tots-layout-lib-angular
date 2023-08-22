@@ -1,4 +1,10 @@
-.tots-new-page-box {
-  background-color: white;
-  padding: var(--space_medium);
+.base-new-page{
+  .tots-new-page-box {
+    background-color: white;
+    padding: var(--space_medium);
+  }
+
+  .btn-submit{
+    width: 100%;
+  }
 }
