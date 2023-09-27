@@ -24,6 +24,8 @@ export class TotsBaseNewPageComponent {
   @Input() item: any;
   @Output() formAction = new EventEmitter<TotsActionForm>();
 
+  @Input() saveButtonText: string = 'Save';
+
   constructor() { }
 
   onClickButton() {

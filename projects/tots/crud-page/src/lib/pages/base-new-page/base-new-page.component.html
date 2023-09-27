@@ -10,7 +10,7 @@
         <tots-form #totsForm [fields]="fields" [item]="item" (onAction)="onActionForm($event)"></tots-form>
 
         <div class="tots-new-page-submit-container">
-            <button mat-flat-button color="primary" (click)="onClickSave()" [disabled]="totsForm.group.invalid" class="btn-submit">Save</button>
+            <button mat-flat-button color="primary" (click)="onClickSave()" [disabled]="totsForm.group.invalid" class="btn-submit">{{saveButtonText}}</button>
         </div>
     </div>
 </div>
