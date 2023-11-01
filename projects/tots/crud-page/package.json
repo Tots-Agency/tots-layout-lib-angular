@@ -1,11 +1,13 @@
 {
   "name": "@tots/crud-page",
-  "version": "15.0.18",
+  "version": "16.0.0",
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@tots/layout": "^15.0.14",
-    "@tots/form": "^15.0.28"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@tots/layout": "^16.0.0",
+    "@tots/table": "^16.0.0",
+    "@tots/filter-box": "^16.0.0",
+    "@tots/form": "^16.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
