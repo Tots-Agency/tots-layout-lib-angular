@@ -1,8 +1,11 @@
 <!-- Button -->
 <button mat-button class="tots-user-full-item tots_left_sidebar_button_item" [matMenuTriggerFor]="userActions">
   <div class="avatar_container_very_small">
-    <img *ngIf="data.photo" [src]="data.photo" alt="{{data.firstname}} {{data.lastname}}" class="image_cover" />
-    <mat-icon *ngIf="!data.photo">account_circle</mat-icon>
+    @if (data.photo) {
+      <img [src]="data.photo" alt="{{data.firstname}} {{data.lastname}}" class="image_cover" />
+    } @else {
+      <mat-icon>account_circle</mat-icon>
+    }
   </div>
   <div class="nav-item-title"> {{data.firstname}} {{data.lastname}} </div>
 </button>
@@ -13,9 +16,13 @@
     <div class="user-data-node-title h5">{{data.firstname}} {{data.lastname}}</div>
     <div class="user-data-node-subtitle body_1 color_neutral_50">{{data.email}}</div>
   </div>
+
   <mat-divider></mat-divider>
-  <button *ngFor="let menuItem of data.items" mat-menu-item (click)="onClick(menuItem)">
-    <mat-icon>{{menuItem.icon}}</mat-icon>
-    <span>{{menuItem.title}}</span>
-  </button>
+
+  @for (menuItem of data.items; track $index) {
+    <button mat-menu-item (click)="onClick(menuItem)">
+      <mat-icon>{{menuItem.icon}}</mat-icon>
+      <span>{{menuItem.title}}</span>
+    </button>
+  }
 </mat-menu>

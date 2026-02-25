@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TotsConfirmModalConfig } from '../../entities/tots-confirm-modal-config';
 
@@ -8,15 +8,12 @@ import { TotsConfirmModalConfig } from '../../entities/tots-confirm-modal-config
   styleUrls: ['./tots-confirm-modal.component.scss'],
   standalone: false
 })
-export class TotsConfirmModalComponent implements OnInit {
+export class TotsConfirmModalComponent {
 
   constructor(
     public dialogRef: MatDialogRef<TotsConfirmModalComponent>,
     @Inject(MAT_DIALOG_DATA) public config: TotsConfirmModalConfig,
   ) { }
-
-  ngOnInit(): void {
-  }
 
   onClick(value: any) {
     this.dialogRef.close(value);

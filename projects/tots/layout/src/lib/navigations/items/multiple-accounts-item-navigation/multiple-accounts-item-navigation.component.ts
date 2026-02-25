@@ -1,21 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TotsLayoutService } from '../../../services/tots-layout.service';
 
 @Component({
   selector: 'tots-multiple-accounts-item-navigation',
   templateUrl: './multiple-accounts-item-navigation.component.html',
-  styleUrls: ['./multiple-accounts-item-navigation.component.scss']
+  styleUrls: ['./multiple-accounts-item-navigation.component.scss'],
+  standalone: false
 })
-export class MultipleAccountsItemNavigationComponent implements OnInit {
+export class MultipleAccountsItemNavigationComponent {
 
   @Input() data: any;
 
   constructor(
     protected layoutService: TotsLayoutService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   onClickAccount(account: any) {
     account.key = 'change_account';
@@ -30,7 +28,7 @@ export class MultipleAccountsItemNavigationComponent implements OnInit {
     this.layoutService.navigationClick.next({ key: 'new_account' });
   }
 
-  getAccounts(): any[] {
+  get accounts() : any[] {
     if(this.data.id != undefined && this.data.id > 0){
       return this.data.accounts.filter((account: any) => account.id != this.data.id);
     }

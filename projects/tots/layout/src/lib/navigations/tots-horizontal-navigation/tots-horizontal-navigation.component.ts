@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit } from '@angular/core';
 import { TotsItemNavigation } from '../../entities/tots-item-navigation';
 import { TotsLayoutService } from '../../services/tots-layout.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'tots-horizontal-navigation',
   templateUrl: './tots-horizontal-navigation.component.html',
-  styleUrls: ['./tots-horizontal-navigation.component.scss']
+  styleUrls: ['./tots-horizontal-navigation.component.scss'],
+  standalone: false
 })
 export class TotsHorizontalNavigationComponent implements OnInit {
 
@@ -13,7 +15,8 @@ export class TotsHorizontalNavigationComponent implements OnInit {
   rightItems = new Array<TotsItemNavigation>();
 
   constructor(
-    protected layoutService: TotsLayoutService
+    protected layoutService: TotsLayoutService,
+    private destroyRef: DestroyRef
   ) { }
 
   ngOnInit(): void {
@@ -21,7 +24,9 @@ export class TotsHorizontalNavigationComponent implements OnInit {
   }
 
   loadConfig() {
-    this.layoutService.navigationItems.subscribe(res => {
+    this.layoutService.navigationItems.pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe(res => {
       this.leftItems = res.left;
       this.rightItems = res.right;
     });

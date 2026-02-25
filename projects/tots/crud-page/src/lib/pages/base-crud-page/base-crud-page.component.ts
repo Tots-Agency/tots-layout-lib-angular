@@ -8,7 +8,8 @@ import { TotsActionTable, TotsTableApiComponent, TotsTableApiConfig } from '@tot
   selector: 'tots-base-crud-page',
   templateUrl: './base-crud-page.component.html',
   styleUrls: ['./base-crud-page.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class TotsBaseCrudPageComponent {
 

@@ -8,7 +8,8 @@ import { TotsBreadcrumbItem } from '@tots/layout';
 @Component({
   selector: 'app-test-crud',
   templateUrl: './test-crud.component.html',
-  styleUrls: ['./test-crud.component.scss']
+  styleUrls: ['./test-crud.component.scss'],
+  standalone: false
 })
 export class TestCrudComponent implements OnInit {
 

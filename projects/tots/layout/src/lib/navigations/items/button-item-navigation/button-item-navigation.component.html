@@ -1,12 +1,14 @@
 <a mat-button [routerLink]="data.path" routerLinkActive="tots_left_sidebar_button_item_active" class="tots_left_sidebar_button_item">
 
-  <mat-icon *ngIf="data.icon" class="nav-item-icon">{{data.icon}}</mat-icon>
+  @if (data.icon) {
+    <mat-icon class="nav-item-icon">{{data.icon}}</mat-icon>
+  }
   <span class="nav-item-title">{{data.title}}</span>
 
-  <ng-container *ngIf="data.badge">
+  @if (data.badge) {
     <div class="item-badge">
       <div class="badge-content"> {{data.badge}} </div>
     </div>
-  </ng-container>
+  }
 
 </a>

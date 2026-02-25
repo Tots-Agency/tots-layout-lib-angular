@@ -1,7 +1,15 @@
 <div class="base-crud-page intro_component_animation container">
-    <tots-breadcrumb *ngIf="breadcrumb" [items]="breadcrumb!"></tots-breadcrumb>
+    @if (breadcrumb) {
+        <tots-breadcrumb [items]="breadcrumb!"></tots-breadcrumb>
+    }
 
-    <tots-basic-page-header [title]="title" [subtitle]="subtitle" [buttonName]="buttonName" [buttonIcon]="buttonIcon" (clickButton)="onClickButton()"></tots-basic-page-header>
+    <tots-basic-page-header
+        [title]="title"
+        [subtitle]="subtitle"
+        [buttonName]="buttonName"
+        [buttonIcon]="buttonIcon"
+        (clickButton)="onClickButton()"
+    ></tots-basic-page-header>
 
     <mat-divider class="my_3"></mat-divider>
 
@@ -12,22 +20,30 @@
     <div class="tots-crud-page-table-box {{tableClasses}}">
 
         <div class="tots-crud-page-filters-box">
-            <mat-form-field *ngIf="hasSearch" [appearance]="'outline'">
-                <mat-label>Search</mat-label>
-                <input matInput [formControl]="inputSearch" (keyup)="onSearch()">
-                <mat-icon matPrefix>search</mat-icon>
-            </mat-form-field>
+            @if (hasSearch) {
+                <mat-form-field [appearance]="'outline'">
+                    <mat-label>Search</mat-label>
+                    <input matInput [formControl]="inputSearch" (keyup)="onSearch()">
+                    <mat-icon matPrefix>search</mat-icon>
+                </mat-form-field>
+            }
 
-            <tots-filter-box *ngIf="filterConfig" class="tots-filter-box-class" [config]="filterConfig!" (apply)="onApplyFilters($event)"></tots-filter-box>
+            @if (filterConfig) {
+                <tots-filter-box class="tots-filter-box-class" [config]="filterConfig!" (apply)="onApplyFilters($event)"></tots-filter-box>
+            }
         </div>
 
-        <div *ngIf="selecteds.length > 0" class="tots-crud-page-selecteds intro_component_animation">
-            <div>{{selecteds.length}} item/s selected</div>
-            <button mat-flat-button (click)="onRemoveBulk()"><mat-icon>delete</mat-icon> Delete</button>
-        </div>
+        @if (selecteds.length > 0) {
+            <div class="tots-crud-page-selecteds intro_component_animation">
+                <div>
+                    {{selecteds.length}} item/s selected
+                </div>
+                <button mat-flat-button (click)="onRemoveBulk()"><mat-icon>delete</mat-icon> Delete</button>
+            </div>
+        }
 
         <div class="tots-crud-page-table-content">
-          <tots-table-api #tableComp [config]="tableConfig" (onAction)="onTableAction($event)"></tots-table-api>
+            <tots-table-api #tableComp [config]="tableConfig" (onAction)="onTableAction($event)"></tots-table-api>
         </div>
 
     </div>

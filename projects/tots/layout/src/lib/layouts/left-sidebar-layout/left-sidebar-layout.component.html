@@ -5,15 +5,16 @@
 
     <!-- Sidebar Mobile -->
     <div class="toolbar-mobile">
-      <button mat-button class="btn-menu" (click)="isMenuOpen = !isMenuOpen">
-        <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
-        <mat-icon *ngIf="isMenuOpen">close</mat-icon>
+      <button mat-button class="btn-menu" (click)="isMenuOpen.set(!isMenuOpen())">
+        <mat-icon>
+          {{ isMenuOpen() ? "close" : "menu" }}
+        </mat-icon>
         Menu
       </button>
     </div>
 
     <!-- Sidebar -->
-    <div class="tots-left-sidebar-header" [ngClass]="{'tots-left-sidebar-header-mobile': isMenuOpen}" (click)="isMenuOpen = false;">
+    <div class="tots-left-sidebar-header" [ngClass]="{'tots-left-sidebar-header-mobile': isMenuOpen}" (click)="!isMenuOpen()">
         <tots-left-sidebar></tots-left-sidebar>
     </div>
 

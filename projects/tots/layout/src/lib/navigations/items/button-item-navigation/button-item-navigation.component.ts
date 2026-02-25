@@ -1,17 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'tots-button-item-navigation',
   templateUrl: './button-item-navigation.component.html',
-  styleUrls: ['./button-item-navigation.component.scss']
+  styleUrls: ['./button-item-navigation.component.scss'],
+  standalone: false
 })
-export class ButtonItemNavigationComponent implements OnInit {
+export class ButtonItemNavigationComponent {
 
   @Input() data: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

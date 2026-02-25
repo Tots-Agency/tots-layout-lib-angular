@@ -146,7 +146,7 @@
 
 
 // ANGULAR SETTING
-
+/*
 $primary-palette: mat.define-palette((
   50:   var(--color_primary_99),
   100:  var(--color_primary_98),
@@ -264,7 +264,7 @@ $light-theme: mat.define-light-theme((
 
 @include mat.core-theme($light-theme);
 @include mat.all-component-themes($light-theme);
-
+*/
 
 html, body { height: 100%; scroll-behavior: smooth; }
 body, .mat-body, .mat-typography {

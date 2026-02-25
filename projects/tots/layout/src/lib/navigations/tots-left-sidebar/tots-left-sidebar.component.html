@@ -1,3 +1,5 @@
 <div class="tots-left-sidebar-wrapper">
-    <tots-base-item-navigation *ngFor="let item of leftItems" [item]="item"></tots-base-item-navigation>
+    @for (item of leftItems; track $index) {
+        <tots-base-item-navigation [item]="item"></tots-base-item-navigation>
+    }
 </div>

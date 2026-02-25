@@ -5,7 +5,8 @@ import { TotsBreadcrumbItem } from '@tots/layout';
 @Component({
   selector: 'tots-base-new-page',
   templateUrl: './base-new-page.component.html',
-  styleUrls: ['./base-new-page.component.scss']
+  styleUrls: ['./base-new-page.component.scss'],
+  standalone: false
 })
 export class TotsBaseNewPageComponent {
 

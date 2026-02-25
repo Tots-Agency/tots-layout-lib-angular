@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'tots-basic-page-header',
   templateUrl: './tots-basic-page-header.component.html',
-  styleUrls: ['./tots-basic-page-header.component.scss']
+  styleUrls: ['./tots-basic-page-header.component.scss'],
+  standalone: false
 })
-export class TotsBasicPageHeaderComponent implements OnInit {
+export class TotsBasicPageHeaderComponent {
 
   @Input() title?: string = '';
   @Input() subtitle?: string;
@@ -14,11 +15,6 @@ export class TotsBasicPageHeaderComponent implements OnInit {
   @Input() buttonIcon?: string;
 
   @Output() clickButton = new EventEmitter<any>();
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onClick() {
     this.clickButton.emit();

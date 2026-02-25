@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TotsBaseLayoutConfig } from '../../entities/tots-base-layout-config';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'lib-modern-two-layout',
   templateUrl: './modern-two-layout.component.html',
-  styleUrls: ['./modern-two-layout.component.scss']
+  styleUrls: ['./modern-two-layout.component.scss'],
+  standalone: false
 })
 export class ModernTwoLayoutComponent implements OnInit {
   config?: TotsBaseLayoutConfig;
 
   constructor(
-    protected route: ActivatedRoute
+    protected route: ActivatedRoute,
+    private destroyRef:DestroyRef
   ) { }
 
   ngOnInit(): void {
@@ -19,7 +22,9 @@ export class ModernTwoLayoutComponent implements OnInit {
   }
 
   loadConfig() {
-    this.route.data.subscribe(result => {
+    this.route.data.pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe(result => {
       this.config = result as TotsBaseLayoutConfig;
     });
   }

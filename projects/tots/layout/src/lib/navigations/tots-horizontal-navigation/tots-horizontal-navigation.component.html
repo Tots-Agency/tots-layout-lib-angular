@@ -1,8 +1,12 @@
 <div class="tots-horizontal-navigation-wrapper">
     <div class="tots-horizontal-left">
-        <tots-base-item-navigation *ngFor="let item of leftItems" [item]="item"></tots-base-item-navigation>
+        @for (item of leftItems; track $index) {
+            <tots-base-item-navigation [item]="item"></tots-base-item-navigation>
+        }
     </div>
     <div class="tots-horizontal-right">
-        <tots-base-item-navigation *ngFor="let item of rightItems" [item]="item"></tots-base-item-navigation>
+        @for (item of rightItems; track $index) {
+            <tots-base-item-navigation [item]="item"></tots-base-item-navigation>
+        }
     </div>
 </div>

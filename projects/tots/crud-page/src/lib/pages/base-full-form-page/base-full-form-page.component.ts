@@ -10,7 +10,8 @@ import { TOTS_CORE_PROVIDER, TotsCoreConfig } from '@tots/core';
 @Component({
   selector: 'tots-full-form-page',
   templateUrl: './base-full-form-page.component.html',
-  styleUrls: ['./base-full-form-page.component.css']
+  styleUrls: ['./base-full-form-page.component.css'],
+  standalone: false
 })
 export class TotsFullFormPageComponent extends TotsBaseNewPageComponent {
 

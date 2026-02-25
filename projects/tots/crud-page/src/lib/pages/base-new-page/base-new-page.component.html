@@ -1,7 +1,15 @@
 <div class="base-new-page intro_component_animation container">
-    <tots-breadcrumb *ngIf="breadcrumb" [items]="breadcrumb!"></tots-breadcrumb>
+    @if (breadcrumb) {
+        <tots-breadcrumb [items]="breadcrumb!"></tots-breadcrumb>
+    }
 
-    <tots-basic-page-header [title]="title" [subtitle]="subtitle" [buttonName]="buttonName" [buttonIcon]="buttonIcon" (clickButton)="onClickButton()"></tots-basic-page-header>
+    <tots-basic-page-header
+        [title]="title"
+        [subtitle]="subtitle"
+        [buttonName]="buttonName"
+        [buttonIcon]="buttonIcon"
+        (clickButton)="onClickButton()"
+    ></tots-basic-page-header>
 
     <mat-divider class="my_3"></mat-divider>
 
@@ -10,7 +18,9 @@
         <tots-form #totsForm [fields]="fields" [item]="item" (onAction)="onActionForm($event)"></tots-form>
 
         <div class="tots-new-page-submit-container">
-            <button mat-flat-button color="primary" (click)="onClickSave()" [disabled]="totsForm.group.invalid" class="btn-submit">{{saveButtonText}}</button>
+            <button mat-flat-button color="primary" (click)="onClickSave()" [disabled]="totsForm.group.invalid" class="btn-submit">
+                {{saveButtonText}}
+            </button>
         </div>
     </div>
 </div>

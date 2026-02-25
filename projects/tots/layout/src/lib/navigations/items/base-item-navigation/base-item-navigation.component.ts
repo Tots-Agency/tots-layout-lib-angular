@@ -1,10 +1,11 @@
-import { Component, ComponentFactoryResolver, Input, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { TotsItemNavigation } from '../../../entities/tots-item-navigation';
 
 @Component({
   selector: 'tots-base-item-navigation',
   templateUrl: './base-item-navigation.component.html',
-  styleUrls: ['./base-item-navigation.component.scss']
+  styleUrls: ['./base-item-navigation.component.scss'],
+  standalone: false
 })
 export class BaseItemNavigationComponent implements OnInit {
 

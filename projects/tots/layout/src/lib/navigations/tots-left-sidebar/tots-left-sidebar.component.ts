@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { TotsLinkItem } from '../../entities/tots-link-item';
 import { TotsLayoutService } from '../../services/tots-layout.service';
 import { TotsItemNavigation } from '../../entities/tots-item-navigation';
 
 @Component({
   selector: 'tots-left-sidebar',
   templateUrl: './tots-left-sidebar.component.html',
-  styleUrls: ['./tots-left-sidebar.component.scss']
+  styleUrls: ['./tots-left-sidebar.component.scss'],
+  standalone: false
 })
 export class TotsLeftSidebarComponent {
 

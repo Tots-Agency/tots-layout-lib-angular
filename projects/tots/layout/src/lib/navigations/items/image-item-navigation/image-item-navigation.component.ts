@@ -3,7 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'tots-image-item-navigation',
   templateUrl: './image-item-navigation.component.html',
-  styleUrls: ['./image-item-navigation.component.scss']
+  styleUrls: ['./image-item-navigation.component.scss'],
+  standalone: false
 })
 export class ImageItemNavigationComponent implements OnInit {
 
