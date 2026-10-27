@@ -1,9 +1,11 @@
 <div class="confirmation-modal">
-    <h3> {{ config.title }} </h3>
-    <p [innerHTML]="config.caption"></p>
-    <br>
-    
+  <h3> {{ config.title }} </h3>
+  <p [innerHTML]="config.caption"></p>
+  <br>
+
     <div class="buttons">
-        <button *ngFor="let button of config.buttons" mat-flat-button (click)="onClick(button.value)" [class]="button.color">{{button.title}}</button>
+      @for (button of config.buttons; track button) {
+        <button mat-flat-button (click)="onClick(button.value)" [class]="button.color">{{button.title}}</button>
+      }
     </div>
-</div>
+  </div>

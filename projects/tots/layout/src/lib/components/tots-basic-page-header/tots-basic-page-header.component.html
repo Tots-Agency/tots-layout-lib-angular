@@ -1,15 +1,19 @@
 <div class="basic-page-header d_flex">
-    <div class="column-left">
-        <h1 class="basic-page-header-title my_0"><b>{{title}}</b></h1>
-        <div class="basic-page-header-subtitle mt_1">{{subtitle}}</div>
-    </div>
-    <div class="column-right">
-        <button *ngIf="buttonName" mat-flat-button color="primary" (click)="onClick()">
-            <mat-icon *ngIf="buttonIcon">{{buttonIcon}}</mat-icon>
-            {{buttonName}}
-        </button>
-    </div>
+  <div class="column-left">
+    <h1 class="basic-page-header-title my_0"><b>{{title}}</b></h1>
+    <div class="basic-page-header-subtitle mt_1">{{subtitle}}</div>
+  </div>
+  <div class="column-right">
+    @if (buttonName) {
+      <button mat-flat-button color="primary" (click)="onClick()">
+        @if (buttonIcon) {
+          <mat-icon>{{buttonIcon}}</mat-icon>
+        }
+        {{buttonName}}
+      </button>
+    }
+  </div>
 </div>
 <div class="basic-page-header-extra">
-    <ng-content></ng-content>
+  <ng-content></ng-content>
 </div>
